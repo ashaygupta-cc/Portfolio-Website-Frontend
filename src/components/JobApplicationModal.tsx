@@ -420,21 +420,21 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
               {/* Position Info */}
               <div className="mb-3 md:mb-4 relative z-10">
                 <h3 className={`text-lg md:text-xl font-bold mb-1 md:mb-2 ${
-                  position.available ? 'text-light-text dark:text-molten-gold' : 'text-gray-500 dark:text-smoke-gray'
+                  position.available ? 'text-light-text dark:text-molten-gold' : 'text-gray-500 dark:text-dark-text-muted'
                 }`}>
                   {position.title}
                 </h3>
                 <div className="space-y-1 text-xs md:text-sm">
-                  <p className={position.available ? 'text-light-crystal-purple dark:text-crimson-blaze font-medium' : 'text-gray-400 dark:text-smoke-gray'}>
+                  <p className={position.available ? 'text-light-crystal-purple dark:text-crimson-blaze font-medium' : 'text-gray-400 dark:text-dark-text-muted'}>
                     {position.department} • {position.type}
                   </p>
-                  <p className={position.available ? 'text-light-muted dark:text-dark-text-muted' : 'text-gray-400 dark:text-smoke-gray'}>
+                  <p className={position.available ? 'text-light-muted dark:text-dark-text-muted' : 'text-gray-400 dark:text-dark-text-muted'}>
                     🌍 {position.location}
                   </p>
-                  <p className={position.available ? 'text-light-muted dark:text-dark-text-muted' : 'text-gray-400 dark:text-smoke-gray'}>
+                  <p className={position.available ? 'text-light-muted dark:text-dark-text-muted' : 'text-gray-400 dark:text-dark-text-muted'}>
                     📚 {position.experience}
                   </p>
-                  <p className={`font-semibold ${position.available ? 'text-green-600 dark:text-molten-gold' : 'text-gray-400 dark:text-smoke-gray'}`}>
+                  <p className={`font-semibold ${position.available ? 'text-green-600 dark:text-molten-gold' : 'text-gray-400 dark:text-dark-text-muted'}`}>
                     ⏰ {position.commitment}
                   </p>
                 </div>
@@ -455,7 +455,7 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
                   Skills & Technologies:
                 </p>
                 <div className="flex flex-wrap gap-1">
-                  {position.skills.slice(0, 3).map((skill, i) => (
+                  {position.skills.slice(0, 5).map((skill, i) => (
                     <span
                       key={i}
                       className={`px-2 py-1 text-xs rounded-full ${
@@ -467,13 +467,13 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
                       {skill}
                     </span>
                   ))}
-                  {position.skills.length > 3 && (
+                  {position.skills.length > 5 && (
                     <span className={`px-2 py-1 text-xs rounded-full ${
                       position.available
                         ? 'bg-white/80 dark:bg-ashen-charcoal text-gray-700 dark:text-dark-text-muted shadow-sm'
                         : 'bg-gray-200 dark:bg-smoke-gray text-gray-400 dark:text-dark-text-muted'
                     }`}>
-                      +{position.skills.length - 3} more
+                      +{position.skills.length - 5} more
                     </span>
                   )}
                 </div>
@@ -490,7 +490,7 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
                   {position.benefits.slice(0, 2).map((benefit, i) => (
                     <div key={i} className="flex items-center">
                       <div className={`w-1.5 h-1.5 rounded-full mr-2 ${
-                        position.available ? 'bg-light-crystal-blue dark:bg-inferno-orange' : 'bg-gray-300 dark:bg-smoke-gray'
+                        position.available ? 'bg-light-crystal-blue dark:bg-inferno-orange' : 'bg-gray-300 dark:bg-gray-500'
                       }`} />
                       <span className={`text-xs ${
                         position.available ? 'text-light-muted dark:text-dark-text-muted' : 'text-gray-400 dark:text-dark-text-muted'
