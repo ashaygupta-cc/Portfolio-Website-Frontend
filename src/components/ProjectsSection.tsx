@@ -82,10 +82,10 @@ const ProjectsSection: React.FC = () => {
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Light mode: subtle, peaceful elements */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-light-crystal-blue rounded-full opacity-30 animate-float blur-xl dark:hidden" />
-        <div className="absolute top-40 right-20 w-24 h-24 bg-light-crystal-purple rounded-full opacity-25 animate-float blur-lg dark:hidden" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-light-crystal-blue rounded-full opacity-20 animate-float blur-md dark:hidden" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-light-crystal-purple rounded-full opacity-25 animate-float blur-lg dark:hidden" style={{ animationDelay: '0.5s' }} />
+        <div className="absolute top-20 left-10 w-32 h-32 bg-light-crystal-blue rounded-full opacity-10 animate-float blur-xl dark:hidden" />
+        <div className="absolute top-40 right-20 w-24 h-24 bg-light-crystal-purple rounded-full opacity-15 animate-float blur-lg dark:hidden" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-light-crystal-blue rounded-full opacity-12 animate-float blur-md dark:hidden" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-light-crystal-purple rounded-full opacity-20 animate-float blur-lg dark:hidden" style={{ animationDelay: '0.5s' }} />
 
         {/* Dark mode: fire particles (only visible in dark mode) */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-inferno-orange rounded-full opacity-10 animate-flame-dance blur-xl hidden dark:block" />
