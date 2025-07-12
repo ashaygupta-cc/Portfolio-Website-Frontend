@@ -249,11 +249,12 @@ const JourneySection: React.FC = () => {
                       </p>
 
                       {/* Achievements */}
-                      { step.achievements && (
+                     
                       <div className="space-y-2">
+                       { step.achievements && step.achievements.length > 0 && (
                         <p className="text-sm font-medium text-light-muted dark:text-dark-text-muted mb-3">
                           Key Achievements:
-                        </p>
+                        </p> )}
                         {step.achievements.map((achievement, i) => (
                           <div key={i} className="flex items-start">
                             <div className="w-2 h-2 bg-light-crystal-blue dark:bg-inferno-orange rounded-full mr-3" />
@@ -262,11 +263,10 @@ const JourneySection: React.FC = () => {
                             </span>
                           </div>
                         ))}
-                      </div> )}
+                      </div> 
                     </motion.div>
                   </div>
 
-                  {/* Mobile Content - Full width with timeline integration */}
                   <div className="w-full lg:hidden pl-16 pr-4">
                     <motion.div
                       whileHover={{
@@ -276,7 +276,6 @@ const JourneySection: React.FC = () => {
                       }}
                       className="bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl p-6 shadow-light-shadow-lg dark:shadow-lg hover:shadow-light-shadow-xl dark:hover:shadow-2xl hover:border-light-crystal-blue dark:hover:border-inferno-orange transition-all duration-500"
                     >
-                      {/* Mobile Year badge and icon */}
                       <div className="flex items-center mb-4">
                         <div className="w-10 h-10 bg-light-crystal-blue/20 dark:bg-ember-red rounded-xl flex items-center justify-center text-light-crystal-purple dark:text-molten-gold mr-3">
                           {step.icon}
@@ -297,13 +296,12 @@ const JourneySection: React.FC = () => {
                       <p className="text-light-muted dark:text-dark-text-muted leading-relaxed mb-4 font-light text-sm">
                         {step.description}
                       </p>
-
-                      {/* Mobile Achievements */}
-                      { step.achievements && (
+     
                       <div className="space-y-2">
+                        { step.achievements && step.achievements.length > 0 && (
                         <p className="text-xs font-medium text-light-muted dark:text-dark-text-muted mb-2">
                           Key Achievements:
-                        </p>
+                        </p> )}
                         {step.achievements.map((achievement, i) => (
                           <div key={i} className="flex items-center">
                             <div className="w-1.5 h-1.5 bg-light-crystal-blue dark:bg-inferno-orange rounded-full mr-2" />
@@ -312,11 +310,10 @@ const JourneySection: React.FC = () => {
                             </span>
                           </div>
                         ))}
-                      </div> )}
+                      </div> 
                     </motion.div>
                   </div>
 
-                  {/* Desktop Central timeline node */}
                   <div className="hidden lg:flex w-2/12 justify-center">
                     <motion.div
                       initial={{ scale: 0 }}
