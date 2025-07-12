@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp, Github } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 import GitViz from '/GitViz.png'
-import Portfolio from '/Portfolio.png'
+import Portfolio from '/Portfolio.jpg'
 
 const ProjectsSection: React.FC = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);

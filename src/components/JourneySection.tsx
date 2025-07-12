@@ -13,7 +13,7 @@ import {
   ChevronUp,
 } from "lucide-react";
 import BinaryBeats from "/Binary Beats logo.jpg";
-import StAloysius from "/St Aloysius.png";
+import StAloysius from "/St Aloysius.jpg";
 import IIITV from "/IIITV.jpg";
 import JEE from "/JEE.jpg";
 
