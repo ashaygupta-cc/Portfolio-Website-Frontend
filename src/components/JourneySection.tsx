@@ -249,6 +249,7 @@ const JourneySection: React.FC = () => {
                       </p>
 
                       {/* Achievements */}
+                      { step.achievements && (
                       <div className="space-y-2">
                         <p className="text-sm font-medium text-light-muted dark:text-dark-text-muted mb-3">
                           Key Achievements:
@@ -261,7 +262,7 @@ const JourneySection: React.FC = () => {
                             </span>
                           </div>
                         ))}
-                      </div>
+                      </div> )}
                     </motion.div>
                   </div>
 
@@ -298,6 +299,7 @@ const JourneySection: React.FC = () => {
                       </p>
 
                       {/* Mobile Achievements */}
+                      { step.achievements && (
                       <div className="space-y-2">
                         <p className="text-xs font-medium text-light-muted dark:text-dark-text-muted mb-2">
                           Key Achievements:
@@ -310,7 +312,7 @@ const JourneySection: React.FC = () => {
                             </span>
                           </div>
                         ))}
-                      </div>
+                      </div> )}
                     </motion.div>
                   </div>
 
