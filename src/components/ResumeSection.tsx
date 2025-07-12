@@ -15,7 +15,7 @@ const ResumeSection: React.FC = () => {
         'Delivered 5+ successful projects',
         'Achieved 90% client satisfaction rate'
       ]
-    },
+    }/*,
     {
       title: 'Full-Stack Developer',
       company: '-',
@@ -27,7 +27,7 @@ const ResumeSection: React.FC = () => {
         'Improved code quality through peer reviews',
         'Integrated third-party APIs and payment systems'
       ]
-    }
+    }*/
   ];
 
   const education = [
@@ -39,19 +39,38 @@ const ResumeSection: React.FC = () => {
       cpi: '8.17',
       achievements: [
         'Codechef 3-Star',
-        'Trio Coder (Codeforces)',
-        'Secured 2nd position in Intra-college Hackathon'
+        'Trio Code Jam Winner',
+        'Init Mains Winner',
+        'Init Advance Winner'
       ]
-    }
+    },
+    {
+  "degree": "Secondary & High School Education",
+  "school": "St. Aloysius Secondary School",
+  "period": "2011-2023",
+  "location": "Unnao, Uttar Pradesh, India",
+  "description": "Completed secondary and high school education at St. Aloysius with consistent top performance in both academics and sports. Maintained a well-rounded profile through active participation in competitions and school activities.",
+  "achievements": [
+    "12× Academic Rank 1",
+    "6× Inter-College Sprint Winner (100m & 200m)",
+    "3× 400m Sprint Winner",
+    "2× Inter-House Kabaddi Champion (1× MVP)",
+    "2× Kho-Kho Championship Winner",
+    "1× Chess Championship Winner",
+    "2× Team Quiz Competition (Talent Cocktail) Winner",
+    "1× Interschool Debate Winner",
+    "4× Full Attendance Award",
+  ]
+}
   ];
 
   const certifications = [
     'Intro to Machine Learning (Kaggle)',
     'Pandas (Kaggle)',
-    'Intermediate Machine Learning (Kaggle)',
+    /* 'Intermediate Machine Learning (Kaggle)',
     'Unsupervised Learning, Recommenders, Reinforcement Learning (DeepLearning.AI)',
     'Advanced Learning Algorithms (DeepLearning.AI)',
-    'Data Science and Machine Learning (Code With Harry)'
+    'Data Science and Machine Learning (Code With Harry)'*/
   ];
 
   return (

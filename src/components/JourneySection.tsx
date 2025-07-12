@@ -13,6 +13,10 @@ import {
   ChevronUp,
 } from "lucide-react";
 import BinaryBeats from "/Binary Beats logo.jpg";
+import StAloysius from "/St Aloysius.png";
+import IIITV from "/IIITV.jpg";
+import JEE from "/JEE.jpg";
+
 
 const JourneySection: React.FC = () => {
   const [showFullJourney, setShowFullJourney] = useState(false);
@@ -25,7 +29,7 @@ const JourneySection: React.FC = () => {
       subtitle: "St. Aloysius Secondary School",
       description:
         "Completed secondary and high school education at St. Aloysius with consistent top performance in both academics and sports. Maintained a well-rounded profile through active participation in competitions and school activities.",
-      image: "",
+      image: StAloysius,
       icon: <GraduationCap className="w-6 h-6" />,
       position: "left",
       achievements: [
@@ -47,7 +51,7 @@ const JourneySection: React.FC = () => {
       subtitle: "Competitive Exam Preparation",
       description:
         "Focused on JEE Main, JEE Advanced, COMEDK, and MHT-CET with dedicated coaching in Physics, Chemistry, and Mathematics. Balanced rigorous preparation with strong conceptual clarity, especially in Chemistry.",
-      image: "",
+      image: JEE,
       icon: <BookOpen className="w-6 h-6" />,
       position: "right",
       achievements: [
@@ -68,7 +72,7 @@ const JourneySection: React.FC = () => {
       subtitle: "Indian Institute of Information Technology, Vadodara",
       description:
         "Currently a Sophomore at IIIT Vadodara, pursuing B.Tech with a strong focus on Full-Stack Development (MERN Stack), Machine Learning, Competitive Programming, and Leadership Development. Actively exploring both technical depth and collaborative growth.",
-      image: "",
+      image: IIITV,
       icon: <GraduationCap className="w-6 h-6" />,
       position: "left",
       achievements: [],
@@ -353,7 +357,7 @@ const JourneySection: React.FC = () => {
                         <img
                           src={step.image}
                           alt={step.title}
-                          className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                          className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
 
@@ -389,7 +393,7 @@ const JourneySection: React.FC = () => {
                         <img
                           src={step.image}
                           alt={step.title}
-                          className="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-110"
+                          className="w-full h-45 object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
 

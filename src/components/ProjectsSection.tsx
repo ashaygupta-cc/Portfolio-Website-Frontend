@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp, Github } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 import GitViz from '/GitViz.png'
+import Portfolio from '/Portfolio.png'
 
 const ProjectsSection: React.FC = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
@@ -19,9 +20,9 @@ const ProjectsSection: React.FC = () => {
     {
       title: 'Portfolio Website',
       description: 'Modern portfolio website with 3D animations, smooth transitions, and responsive design. Built with React and Three.js for an immersive user experience.',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: Portfolio,
       technologies: ['React', 'Three.js', 'Tailwind CSS', 'Framer Motion'],
-      demoUrl: '#',
+      demoUrl: 'https://portfolio-website-ashay.vercel.app/',
       githubUrl: '#'
     }
    /*, {

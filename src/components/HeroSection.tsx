@@ -132,7 +132,7 @@ const HeroSection: React.FC = () => {
                 <div className="text-sm text-light-muted dark:text-dark-text-muted font-light">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-light text-purple-600  dark:text-molten-gold mb-1 animate-fire-flicker">100%</div>
+                <div className="text-2xl font-light text-purple-600  dark:text-molten-gold mb-1 animate-fire-flicker">90% +</div>
                 <div className="text-sm text-light-muted dark:text-dark-text-muted font-light">Client Satisfaction</div>
               </div>
             </motion.div>
