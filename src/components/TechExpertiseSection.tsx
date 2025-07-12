@@ -66,7 +66,7 @@ const TechExpertiseSection: React.FC = () => {
   ];
 
   const detailedSkills = {
-    frontend: [
+     frontend: [
       { name: 'React.js', icon: '⚛️', percentage: 100, barGradient: 'from-blue-500 to-purple-600' },
       { name: 'JavaScript', icon: 'JS', percentage: 100, barGradient: 'from-blue-500 to-purple-600' },
       { name: 'HTML5', icon: '📄', percentage: 100, barGradient: 'from-blue-500 to-purple-600' },
@@ -266,15 +266,16 @@ const TechExpertiseSection: React.FC = () => {
                       whileHover={{ scale: 1.02 }}
                       className="flex flex-col p-3 bg-light-surface dark:bg-ashen-charcoal border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-light-crystal-blue dark:hover:border-inferno-orange hover:shadow-light-shadow-md dark:hover:shadow-ember-glow transition-all duration-300"
                     >
-                      <div className="flex items-center justify-between mb-2"> {/* Group icon, name, and percentage */}
+                      <div className="flex items-center justify-between mb-2 md:justify-start md:space-x-2 md:mb-0"> {/* Adjusted for desktop */}
                         <div className="flex items-center space-x-2"> {/* Group icon and name */}
                           <span className="text-2xl">{skill.icon}</span>
                           <span className="font-medium text-light-text dark:text-molten-gold text-sm sm:text-base">{skill.name}</span>
                         </div>
-                        <span className="font-medium text-light-text dark:text-molten-gold text-sm sm:text-base">{skill.percentage}%</span>
+                        {/* Percentage mark - hidden on medium and larger screens */}
+                        <span className="font-medium text-light-text dark:text-molten-gold text-sm sm:text-base md:hidden">{skill.percentage}%</span>
                       </div>
-                      {/* Progress Bar */}
-                      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-smoke-gray">
+                      {/* Progress Bar - hidden on medium and larger screens */}
+                      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-smoke-gray md:hidden">
                         <div 
                           className={`h-2.5 rounded-full bg-gradient-to-r ${skill.barGradient}`} 
                           style={{ width: `${skill.percentage}%` }}
