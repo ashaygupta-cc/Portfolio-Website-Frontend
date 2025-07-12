@@ -17,18 +17,18 @@ const ProjectsSection: React.FC = () => {
       githubUrl: '#'
     },
     {
-      title: 'Real-time Chat App',
-      description: 'Scalable real-time messaging application with WebSocket integration, file sharing, and group chat functionality.',
-      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['React', 'Socket.io', 'Express', 'Redis'],
-      demoUrl: '#',
-      githubUrl: '#'
-    },
-    {
       title: 'Portfolio Website',
       description: 'Modern portfolio website with 3D animations, smooth transitions, and responsive design. Built with React and Three.js for an immersive user experience.',
       image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600',
       technologies: ['React', 'Three.js', 'Tailwind CSS', 'Framer Motion'],
+      demoUrl: '#',
+      githubUrl: '#'
+    }
+   /*, {
+      title: 'Real-time Chat App',
+      description: 'Scalable real-time messaging application with WebSocket integration, file sharing, and group chat functionality.',
+      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600',
+      technologies: ['React', 'Socket.io', 'Express', 'Redis'],
       demoUrl: '#',
       githubUrl: '#'
     },
@@ -71,7 +71,7 @@ const ProjectsSection: React.FC = () => {
       technologies: ['React Native', 'Firebase', 'Redux', 'Expo'],
       demoUrl: '#',
       githubUrl: '#'
-    }
+    } */
   ];
 
   const initialProjectCount = 6;
