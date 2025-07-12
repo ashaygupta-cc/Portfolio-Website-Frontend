@@ -4,8 +4,8 @@ import { ChevronDown, ChevronUp, Github } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 import GitViz from '/GitViz.png'
 import { useTheme } from "../contexts/ThemeContext"; 
-import PortfolioLight from '/Portfolio Light.png'
-import PortfolioDark from '/Portfolio Light.jpg'
+import PortfolioLight from '/Portfolio Light.jpg'
+import PortfolioDark from '/Portfolio Dark.png'
 
 
 const ProjectsSection: React.FC = () => {
