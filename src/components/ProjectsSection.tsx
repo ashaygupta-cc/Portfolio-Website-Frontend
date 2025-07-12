@@ -3,11 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronUp, Github } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 import GitViz from '/GitViz.png'
-import Portfolio from '/Portfolio.png'
+import { useTheme } from "../contexts/ThemeContext"; 
+import PortfolioLight from '/Portfolio Light.png'
+import PortfolioDark from '/Portfolio Light.jpg'
+
 
 const ProjectsSection: React.FC = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
-
+  const { isDark } = useTheme();
   const projects = [
     {
       title: 'GitViz : A GitHub Visual Explorer',
@@ -20,7 +23,7 @@ const ProjectsSection: React.FC = () => {
     {
       title: 'Portfolio Website',
       description: 'Modern portfolio website with 3D animations, smooth transitions, and responsive design. Built with React and Three.js for an immersive user experience.',
-      image: Portfolio,
+      image: isDark ? PortfolioDark : PortfolioLight,
       technologies: ['React', 'Three.js', 'Tailwind CSS', 'Framer Motion', 'Gsap'],
       demoUrl: 'https://portfolio-website-ashay.vercel.app/',
       githubUrl: '#'
