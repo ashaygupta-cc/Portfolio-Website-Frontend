@@ -12,8 +12,8 @@ const ResumeSection: React.FC = () => {
       description: 'Founded and leading a tech team focused on innovative digital solutions. Managing a team of developers and designers while overseeing product development and client relationships.',
       achievements: [
         'Built team from ground up to 2+ members',
-        'Delivered 5+ successful projects',
-        'Achieved 90% client satisfaction rate'
+        'Delivered 2+ successful projects',
+        'Achieved 90%+ client satisfaction rate'
       ]
     }/*,
     {
