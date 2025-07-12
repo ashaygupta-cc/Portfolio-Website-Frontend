@@ -67,42 +67,45 @@ const TechExpertiseSection: React.FC = () => {
 
   const detailedSkills = {
     frontend: [
-      { name: 'React.js', icon: '⚛️' },
-      { name: 'Next.js', icon: '⚡' },
-      { name: 'TypeScript', icon: 'TS' },
-      { name: 'JavaScript', icon: 'JS' },
-      { name: 'Tailwind CSS', icon: '💨' },
-      { name: 'Framer Motion', icon: '✨' },
-      { name: 'HTML5', icon: '📄' },
-      { name: 'CSS3', icon: '🎨' },
+      { name: 'React.js', icon: '⚛️', percentage: 100, barGradient: 'from-blue-500 to-purple-600' },
+      { name: 'JavaScript', icon: 'JS', percentage: 100, barGradient: 'from-blue-500 to-purple-600' },
+      { name: 'HTML5', icon: '📄', percentage: 100, barGradient: 'from-blue-500 to-purple-600' },
+      { name: 'CSS3', icon: '🎨', percentage: 100, barGradient: 'from-blue-500 to-purple-600' },
+      { name: 'Tailwind CSS', icon: '💨', percentage: 100, barGradient: 'from-blue-500 to-purple-600' },
+      { name: 'Responsive Design', icon: '📱', percentage: 100, barGradient: 'from-blue-500 to-purple-600' },
+      { name: 'Next.js', icon: '⚡', percentage: 100, barGradient: 'from-blue-500 to-purple-600' },
+      { name: 'Framer Motion', icon: '✨', percentage: 100, barGradient: 'from-blue-500 to-purple-600' },
     ],
     backend: [
-      { name: 'Node.js', icon: '🟢' },
-      { name: 'Express.js', icon: '🚀' },
-      { name: 'Python', icon: '🐍' },
-      { name: 'REST APIs', icon: '🔗' },
-      { name: 'GraphQL', icon: '🌐' },
-      { name: 'MongoDB', icon: '🍃' },
-      { name: 'PostgreSQL', icon: '🐘' },
-      { name: 'Firebase', icon: '🔥' },
+      { name: 'Node.js', icon: '🟢', percentage: 100, barGradient: 'from-purple-500 to-pink-500' },
+      { name: 'Express.js', icon: '🚀', percentage: 100, barGradient: 'from-purple-500 to-pink-500' },
+      { name: 'Python', icon: '🐍', percentage: 100, barGradient: 'from-purple-500 to-pink-500' },
+      { name: 'REST APIs', icon: '🔗', percentage: 100, barGradient: 'from-purple-500 to-pink-500' },
+      { name: 'GraphQL', icon: '🌐', percentage: 100, barGradient: 'from-purple-500 to-pink-500' },
+      { name: 'MongoDB', icon: '🍃', percentage: 100, barGradient: 'from-purple-500 to-pink-500' },
+      { name: 'PostgreSQL', icon: '🐘', percentage: 100, barGradient: 'from-purple-500 to-pink-500' },
+      { name: 'Firebase', icon: '🔥', percentage: 100, barGradient: 'from-purple-500 to-pink-500' },
     ],
     tools: [
-      { name: 'Git', icon: '🌳' },
-      { name: 'GitHub', icon: '🐙' },
-      { name: 'Vercel', icon: '▲' },
-      { name: 'Netlify', icon: '🌐' },
-      { name: 'Figma', icon: '📐' },
-      { name: 'VS Code', icon: '💻' },
+      { name: 'Git & GitHub', icon: '🐙', percentage: 100, barGradient: 'from-blue-400 to-purple-500' },
+      { name: 'VS Code', icon: '💻', percentage: 100, barGradient: 'from-blue-400 to-purple-500' },
+      { name: 'Chrome DevTools', icon: '🔧', percentage: 100, barGradient: 'from-blue-400 to-purple-500' },
+      { name: 'Figma', icon: '📐', percentage: 100, barGradient: 'from-blue-400 to-purple-500' },
+      { name: 'Postman', icon: '📮', percentage: 100, barGradient: 'from-blue-400 to-purple-500' },
+      { name: 'Vercel', icon: '▲', percentage: 100, barGradient: 'from-blue-400 to-purple-500' },
+      { name: 'Netlify', icon: '🌐', percentage: 100, barGradient: 'from-blue-400 to-purple-500' },
+      { name: 'Cloudinary', icon: '☁️', percentage: 100, barGradient: 'from-blue-400 to-purple-500' },
     ],
     softSkills : [ 
-      { name: 'Problem Solving', icon: '💡' },
-      { name: 'Teamwork', icon: '🤝' },
-      { name: 'Communication', icon: '🗣️' },
-      { name: 'Adaptability', icon: '🔄' },
-      { name: 'Leadership', icon: '👑' },
-      { name: 'Time Management', icon: '⏰' },
-      { name: 'Critical Thinking', icon: '🧠' },
-      { name: 'Creativity', icon: '🎨' },
+      { name: 'Problem Solving', icon: '💡', percentage: 100, barGradient: 'from-yellow-400 to-orange-500' },
+      { name: 'Team Collaboration', icon: '🤝', percentage: 100, barGradient: 'from-yellow-400 to-orange-500' },
+      { name: 'Communication', icon: '🗣️', percentage: 100, barGradient: 'from-yellow-400 to-orange-500' },
+      { name: 'Project Management', icon: '📋', percentage: 100, barGradient: 'from-yellow-400 to-orange-500' },
+      { name: 'Creativity', icon: '🎨', percentage: 100, barGradient: 'from-yellow-400 to-orange-500' },
+      { name: 'Adaptability', icon: '🔄', percentage: 100, barGradient: 'from-yellow-400 to-orange-500' },
+      { name: 'Leadership', icon: '👑', percentage: 100, barGradient: 'from-yellow-400 to-orange-500' },
+      { name: 'Time Management', icon: '⏰', percentage: 100, barGradient: 'from-yellow-400 to-orange-500' },
+      { name: 'Critical Thinking', icon: '🧠', percentage: 100, barGradient: 'from-yellow-400 to-orange-500' },
     ],
   };
 
@@ -171,12 +174,12 @@ const TechExpertiseSection: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                    className="bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl p-6 text-center shadow-light-shadow-lg dark:shadow-lg hover:shadow-light-shadow-xl dark:hover:shadow-2xl hover:border-light-crystal-blue dark:hover:border-inferno-orange transition-all duration-500 group"
+                    className="bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl p-4 sm:p-6 text-center shadow-light-shadow-lg dark:shadow-lg hover:shadow-light-shadow-xl dark:hover:shadow-2xl hover:border-light-crystal-blue dark:hover:border-inferno-orange transition-all duration-500 group"
                   >
                     <div className="w-16 h-16 bg-light-crystal-blue/20 dark:bg-ember-red rounded-2xl flex items-center justify-center mx-auto mb-4 text-light-crystal-purple dark:text-molten-gold">
                       {skill.icon}
                     </div>
-                    <h3 className="text-xl font-medium text-light-text dark:text-molten-gold mb-2 group-hover:text-light-crystal-purple dark:group-hover:text-inferno-orange transition-colors duration-300">
+                    <h3 className="text-lg sm:text-xl font-medium text-light-text dark:text-molten-gold mb-2 group-hover:text-light-crystal-purple dark:group-hover:text-inferno-orange transition-colors duration-300">
                       {skill.title}
                     </h3>
                     <p className="text-light-muted dark:text-dark-text-muted text-sm leading-relaxed mb-4 font-light">
@@ -252,7 +255,7 @@ const TechExpertiseSection: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.3 }}
-                  className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-16"
+                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16"
                 >
                   {detailedSkills[activeCategory].map((skill, index) => (
                     <motion.div
@@ -261,10 +264,22 @@ const TechExpertiseSection: React.FC = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, delay: index * 0.05 }}
                       whileHover={{ scale: 1.02 }}
-                      className="flex items-center space-x-3 p-4 bg-light-surface dark:bg-ashen-charcoal border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-light-crystal-blue dark:hover:border-inferno-orange hover:shadow-light-shadow-md dark:hover:shadow-ember-glow transition-all duration-300"
+                      className="flex flex-col p-3 bg-light-surface dark:bg-ashen-charcoal border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-light-crystal-blue dark:hover:border-inferno-orange hover:shadow-light-shadow-md dark:hover:shadow-ember-glow transition-all duration-300"
                     >
-                      <span className="text-2xl">{skill.icon}</span>
-                      <span className="font-medium text-light-text dark:text-molten-gold">{skill.name}</span>
+                      <div className="flex items-center justify-between mb-2"> {/* Group icon, name, and percentage */}
+                        <div className="flex items-center space-x-2"> {/* Group icon and name */}
+                          <span className="text-2xl">{skill.icon}</span>
+                          <span className="font-medium text-light-text dark:text-molten-gold text-sm sm:text-base">{skill.name}</span>
+                        </div>
+                        <span className="font-medium text-light-text dark:text-molten-gold text-sm sm:text-base">{skill.percentage}%</span>
+                      </div>
+                      {/* Progress Bar */}
+                      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-smoke-gray">
+                        <div 
+                          className={`h-2.5 rounded-full bg-gradient-to-r ${skill.barGradient}`} 
+                          style={{ width: `${skill.percentage}%` }}
+                        ></div>
+                      </div>
                     </motion.div>
                   ))}
                 </motion.div>
