@@ -27,7 +27,7 @@ const JourneySection: React.FC = () => {
       id: 1,
       year: "2023",
       title: "Education",
-      subtitle: "St. Aloysius Secondary School",
+      subtitle: "St. Aloysius Secondary School, Unnao",
       description:
         "Completed secondary and high school education at St. Aloysius with consistent top performance in both academics and sports. Maintained a well-rounded profile through active participation in competitions and school activities.",
       image: StAloysius,
@@ -61,9 +61,9 @@ const JourneySection: React.FC = () => {
         "Scored 72/120 in JEE Advanced Chemistry",
         "99.9969 percentile in COMEDK Chemistry",
         "Rank 1111 in MHT-CET",
-        "Physics coaching at Career Crave with Er. Shravan Katiyar",
-        "Chemistry coaching at Nirmal Singh Chemistry Classes",
-        "Mathematics coaching at Vishnoi Classes with Ashish Vishnoi",
+        "Physics coaching at Career Crave with Er. Shravan Katiyar, Kanpur",
+        "Chemistry coaching at Nirmal Singh Chemistry Classes, Kanpur",
+        "Mathematics coaching at Vishnoi Classes with Ashish Vishnoi, Kanpur",
       ],
     },
     {

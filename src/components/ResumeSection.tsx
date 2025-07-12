@@ -7,7 +7,7 @@ const ResumeSection: React.FC = () => {
     {
       title: "Founder & CEO",
       company: "Binary Beats",
-      period: "2024 - Present",
+      period: "2025 - Present",
       location: "Remote",
       description:
         "Founded and leading a tech team focused on innovative digital solutions. Managing a team of developers and designers while overseeing product development and client relationships.",
