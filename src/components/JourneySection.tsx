@@ -82,9 +82,9 @@ const JourneySection: React.FC = () => {
       id: 4,
       year: "2024",
       title: "Competitive Programming",
-      subtitle: "CodeChef & Codeforces",
+      subtitle: "CodeChef, Codeforces & LeetCode",
       description:
-        "Actively participating in competitive programming contests on platforms like CodeChef and Codeforces, honing problem-solving skills and algorithmic thinking. Achieved 3-star rating on CodeChef in less than 5 months in first year & winning several coding contests also.",
+        "Actively participating in competitive programming contests on platforms like CodeChef, LeetCode and Codeforces, honing problem-solving skills and algorithmic thinking. Achieved 3-star rating on CodeChef in less than 5 months in first year & winning several coding contests also.",
       image: CP,
       icon: <Code className="w-6 h-6" />,
       position: "right",
