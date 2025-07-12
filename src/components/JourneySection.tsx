@@ -76,7 +76,7 @@ const JourneySection: React.FC = () => {
       image: IIITV,
       icon: <GraduationCap className="w-6 h-6" />,
       position: "left",
-      achievements: ["Ongoing"],
+      achievements: [],
     },
      {
       id: 4,
