@@ -42,7 +42,8 @@ const CertificationsSection: React.FC = () => {
       issued: "June 2025",
       description:
         "Covers core data manipulation techniques using Pandas, including filtering, grouping, and transforming data in DataFrames.",
-    },
+    }
+    /*,
     {
       name: "Intermediate Machine Learning",
       provider: "Kaggle",
@@ -86,7 +87,7 @@ const CertificationsSection: React.FC = () => {
       issued: "2025",
       description:
         "Hands-on course combining Python, data analysis, visualization, and ML fundamentals for end-to-end data science workflows.",
-    },
+    },*/
   ];
 
   const initialCertCount = 6;
@@ -97,7 +98,7 @@ const CertificationsSection: React.FC = () => {
   return (
     <section
       id="certifications"
-      className="relative min-h-screen py-20 bg-gradient-light-main dark:bg-gradient-dark-main overflow-hidden"
+      className="relative min-h-screen py-20 bg-gradient-light-main dark:bg-gradient-dark-main overflow-hidden will-change-transform md:py-20 sm:py-16 xs:py-12"
     >
       <div className="absolute inset-0 overflow-hidden">
         {/* Light mode: subtle, peaceful elements */}

@@ -18,7 +18,6 @@ const Scene3D: React.FC = () => {
             autoRotateSpeed={0.5}
           />
           
-          {/* Lighting */}
           <ambientLight intensity={0.4} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
           <pointLight position={[-10, -10, -5]} intensity={0.5} />

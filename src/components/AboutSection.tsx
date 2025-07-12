@@ -8,7 +8,7 @@ const AboutSection: React.FC = () => {
     <section
       id="about"
       // Updated to use gradient-light-main for light mode and gradient-dark-main for dark mode
-      className="relative min-h-screen py-20 pt-20 pb-0.4 bg-gradient-light-main dark:bg-gradient-dark-main"
+     className="relative min-h-screen py-20 pt-20 pb-0.4 bg-gradient-light-main dark:bg-gradient-dark-main will-change-transform"
     >
       {/* Background decorative elements - adjusted for theme or kept for dark theme feel */}
       <div className="absolute inset-0 overflow-hidden">

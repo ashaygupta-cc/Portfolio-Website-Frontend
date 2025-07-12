@@ -78,7 +78,7 @@ const ProjectsSection: React.FC = () => {
   const displayedProjects = showAllProjects ? projects : projects.slice(0, initialProjectCount);
 
   return (
-    <section id="projects" className="relative min-h-screen py-20 bg-gradient-light-main dark:bg-gradient-dark-main overflow-hidden">
+    <section id="projects" className="relative min-h-screen py-20 bg-gradient-light-main dark:bg-gradient-dark-main overflow-hidden will-change-transform md:py-20 sm:py-16 xs:py-12">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Light mode: subtle, peaceful elements */}

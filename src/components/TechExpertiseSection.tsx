@@ -23,7 +23,6 @@ import { useTheme } from '../contexts/ThemeContext';
 const TechExpertiseSection: React.FC = () => {
   const { isDark } = useTheme();
   const highlightColor = isDark ? '#FF4500' : '#6366f1';
-  // Changed 'soft' to 'softSkills' in useState type and initial value
   const [activeView, setActiveView] = useState<'cards' | 'skills'>('cards');
   const [activeCategory, setActiveCategory] = useState<'frontend' | 'backend' | 'tools' | 'softSkills'>('frontend');
 
@@ -108,7 +107,7 @@ const TechExpertiseSection: React.FC = () => {
   };
 
   return (
-    <section id="expertise" className="relative min-h-screen py-20 bg-gradient-light-main dark:bg-gradient-dark-main overflow-hidden">
+    <section id="expertise"  className="relative min-h-screen py-20 bg-gradient-light-main dark:bg-gradient-dark-main overflow-hidden will-change-transform md:py-20 sm:py-16 xs:py-12">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Light mode: subtle, peaceful elements */}
@@ -228,9 +227,7 @@ const TechExpertiseSection: React.FC = () => {
               exit={{ opacity: 0, y: -50 }}
               transition={{ duration: 0.5 }}
             >
-              {/* Added flex-wrap and changed space-x-4 to gap-4 for better mobile responsiveness */}
               <div className="flex flex-wrap justify-center gap-4 mb-10">
-                {/* Changed 'soft' to 'softSkills' in the array */}
                 {['frontend', 'backend', 'tools', 'softSkills'].map((category) => (
                   <motion.button
                     key={category}
@@ -243,7 +240,6 @@ const TechExpertiseSection: React.FC = () => {
                         : 'bg-light-surface dark:bg-ashen-charcoal text-light-muted dark:text-dark-text-muted  hover:bg-gray-100 dark:hover:bg-smoke-gray'
                     }`}
                   >
-                    {/* Conditional rendering for "Soft Skills" display name */}
                     {category === 'softSkills' ? 'Soft Skills' : category.charAt(0).toUpperCase() + category.slice(1)}
                   </motion.button>
                 ))}

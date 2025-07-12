@@ -286,11 +286,8 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
           formDataToSend.append(key, value);
         }
       });
-
-      // FIX: Ensure jobType is always explicitly appended to FormData
       formDataToSend.append('jobType', jobType); 
 
-      // This fetch call uses relative path, relying on vercel.json rewrite
       const response = await fetch('/api/job-application', { 
         method: 'POST',
         body: formDataToSend
@@ -310,7 +307,6 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
           onClose();
         }, 3000);
       } else {
-        // FIX: Use result.message directly for a more specific error from backend
         throw new Error(result.message || 'Failed to submit application');
       }
     } catch (error) {
@@ -320,7 +316,6 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
         isSubmitting: false,
         isSuccess: false,
         isError: true,
-        // FIX: Display the specific error message from the backend (error.message will contain result.message)
         message: error instanceof Error ? error.message : 'Failed to submit application. Please try again.'
       });
     }
@@ -336,7 +331,6 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
 
    const renderPositionsView = () => (
     <>
-      {/* Header - Compact for mobile */}
       <div className="bg-gradient-to-r from-light-crystal-purple to-light-crystal-blue dark:from-inferno-orange dark:to-crimson-blaze text-white p-3 md:p-6 rounded-t-3xl flex-shrink-0">
         <div className="flex items-center justify-between">
           <div>
@@ -351,7 +345,7 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
             whileTap={{ scale: 0.9 }}
             className="w-8 h-8 md:w-10 md:h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors flex-shrink-0"
           >
-            <X className="w-4 h-4 md:w-5 h-5" />
+            <X className="w-4 h-4 md:w-5 " />
           </motion.button>
         </div>
       </div>
@@ -854,7 +848,6 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
                     onClick={() => setFormData({ ...formData, resume: null })}
                     className="text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300"
                   >
-                    <X className="w-4 h-4 md:w-5 h-5" />
                   </button>
                 </div>
               ) : (
@@ -936,7 +929,7 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 50 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="bg-light-surface dark:bg-dark-surface rounded-3xl shadow-2xl w-full max-w-6xl max-h-full overflow-hidden flex flex-col"
+             className="bg-light-surface dark:bg-dark-surface rounded-3xl shadow-2xl w-full max-w-6xl max-h-[90vh] md:max-h-full  overflow-hidden flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {currentView === 'positions' ? renderPositionsView() : renderFormView()}

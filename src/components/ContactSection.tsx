@@ -23,7 +23,6 @@ const ContactSection: React.FC = () => {
   useEffect(() => {
     const incrementVisit = async () => {
       try {
-        // Updated to use the correct full path, as vercel.json is handling the proxy
         const response = await fetch('/api/increment-visit', { 
           method: 'POST', 
           headers: {
@@ -35,17 +34,12 @@ const ContactSection: React.FC = () => {
         if (response.ok && result.success) { 
           setProfileVisits(result.visits); 
         } 
-        else {    
-          // FIX: Use result.message from backend if available, for more specific errors
+        else {            
           const errorMessage = result.message || `HTTP error: ${response.status} ${response.statusText}`;
           console.error('Failed to increment profile visits on backend:', errorMessage);
-          // Optionally, set error status to display to user if needed
-          // setSubmitStatus(prev => ({ ...prev, isError: true, message: errorMessage }));
         }
       } catch (error) {
         console.error('Error calling increment-visit API:', error instanceof Error ? error.message : String(error));
-        // Optionally, set error status to display to user if needed
-        // setSubmitStatus(prev => ({ ...prev, isError: true, message: 'Failed to connect to server.' }));
       }
     };
 
@@ -70,7 +64,6 @@ const ContactSection: React.FC = () => {
     });
 
     try {
-      // Updated to use the correct full path, as vercel.json is handling the proxy
       const response = await fetch('/api/contact', { 
         method: 'POST',
         headers: {
@@ -97,7 +90,6 @@ const ContactSection: React.FC = () => {
           message: ''
         });
       } else {
-        // FIX: Use result.message directly for a more specific error from backend
         throw new Error(result.message || 'Failed to send message');
       }
     } catch (error) {
@@ -105,7 +97,6 @@ const ContactSection: React.FC = () => {
         isSubmitting: false,
         isSuccess: false,
         isError: true,
-        // FIX: Display the specific error message from the backend (error.message will contain result.message)
         message: error instanceof Error ? error.message : 'Failed to send message. Please try again.'
       });
     }
@@ -128,7 +119,7 @@ const ContactSection: React.FC = () => {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
       value: 'Kanpur,Uttar Pradesh,India',
-      link: 'https://maps.app.goo.gl/6zURh9TwGdWzFb2AA'
+      link: 'https://maps.app.goo.gl/Gb6eq6uGsXa3riz17'
     }
   ];
 
@@ -186,7 +177,7 @@ const ContactSection: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="relative min-h-screen py-20 bg-gradient-light-main dark:bg-gradient-dark-main">
+    <section id="contact" className="relative min-h-screen py-20 bg-gradient-light-main dark:bg-gradient-dark-main overflow-hidden will-change-transform md:py-20 sm:py-16 xs:py-12">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -324,7 +315,7 @@ const ContactSection: React.FC = () => {
                     disabled={submitStatus.isSubmitting}
                     className="w-full px-4 py-3 border border-gray-300 dark:border-smoke-gray rounded-xl focus:ring-2 focus:ring-light-crystal-purple dark:focus:ring-inferno-orange focus:border-transparent transition-all duration-300 disabled:opacity-50 bg-light-surface dark:bg-ashen-charcoal text-light-text dark:text-dark-text"
                   >
-                    <option value="" className="text-gray-500 dark:text-dark-text-muted">Select project type</option> {/* Ensure this option is selected if no real project is chosen */}
+                    <option value="" className="text-gray-500 dark:text-dark-text-muted">Select project type</option>
                     {projectTypes.map((type) => (
                       <option key={type} value={type} className="text-light-text dark:text-dark-text">{type}</option>
                     ))}
@@ -440,7 +431,7 @@ const ContactSection: React.FC = () => {
 
               <div className="mt-6 grid grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-light-surface dark:bg-dark-card backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-smoke-gray/50">
-                  <div className="text-2xl font-light text-light-crystal-purple dark:text-crimson-blaze mb-1">5K+</div>
+                  <div className="text-2xl font-light text-light-crystal-purple dark:text-crimson-blaze mb-1">2K+</div>
                   <div className="text-xs text-light-muted dark:text-dark-text-muted font-light">Followers</div>
                 </div>
                 <div className="text-center p-4 bg-light-surface dark:bg-dark-card backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-smoke-gray/50">

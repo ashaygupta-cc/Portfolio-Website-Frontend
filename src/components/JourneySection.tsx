@@ -6,6 +6,7 @@ import {
   Zap,
   GraduationCap,
   Target,
+  Code,
   Rocket,
   BookOpen,
   ChevronDown,
@@ -40,7 +41,7 @@ const JourneySection: React.FC = () => {
       ],
     },
     {
-      id: 3,
+      id: 2,
       year: "2024",
       title: "JEE Journey",
       subtitle: "Competitive Exam Preparation",
@@ -48,12 +49,12 @@ const JourneySection: React.FC = () => {
         "Focused on JEE Main, JEE Advanced, COMEDK, and MHT-CET with dedicated coaching in Physics, Chemistry, and Mathematics. Balanced rigorous preparation with strong conceptual clarity, especially in Chemistry.",
       image: "",
       icon: <BookOpen className="w-6 h-6" />,
-      position: "left",
+      position: "right",
       achievements: [
-        "99.13 percentile in JEE Main",
+        "98.13 percentile in JEE Main",
         "Qualified JEE Advanced",
         "Scored 72/120 in JEE Advanced Chemistry",
-        "99.9969 score in COMEDK Chemistry",
+        "99.9969 percentile in COMEDK Chemistry",
         "Rank 1111 in MHT-CET",
         "Physics coaching at Career Crave with Er. Shravan Katiyar",
         "Chemistry coaching at Nirmal Singh Chemistry Classes",
@@ -62,47 +63,64 @@ const JourneySection: React.FC = () => {
     },
     {
       id: 3,
-      year: "2021",
-      title: "Leadership Role",
-      subtitle: "Senior Developer",
-      description:
-        "Became a senior full-stack developer, leading major projects and establishing coding standards. Focused on performance optimization and team development.",
-      image:
-        "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
-      icon: <Target className="w-6 h-6" />,
-      position: "left",
-      achievements: [
-        "Delivered 20+ client projects",
-        "Improved code quality",
-        "Integrated payment systems",
-      ],
-    },
-    {
-      id: 4,
       year: "2024",
-      title: "Bachelor of Technology",
+      title: "Education",
       subtitle: "Indian Institute of Information Technology, Vadodara",
       description:
-        "Currently a sophomore at IIIT Vadodara, pursuing B.Tech with a strong focus on Full-Stack Development (MERN Stack), Machine Learning, Competitive Programming, and Leadership Development. Actively exploring both technical depth and collaborative growth.",
+        "Currently a Sophomore at IIIT Vadodara, pursuing B.Tech with a strong focus on Full-Stack Development (MERN Stack), Machine Learning, Competitive Programming, and Leadership Development. Actively exploring both technical depth and collaborative growth.",
       image: "",
       icon: <GraduationCap className="w-6 h-6" />,
       position: "left",
       achievements: [],
     },
+     {
+      id: 4,
+      year: "2024",
+      title: "Competitive Programming",
+      subtitle: "CodeChef & Codeforces",
+      description:
+        "Actively participating in competitive programming contests on platforms like CodeChef and Codeforces, honing problem-solving skills and algorithmic thinking. Achieved 3-star rating on CodeChef in less than 5 months in first year & winning several coding contests also.",
+      image: "",
+      icon: <Code className="w-6 h-6" />,
+      position: "right",
+      achievements: [
+        "CodeChef 3-Star Rating",
+        "Trio Code Jam Winner",
+        "Init Mains, Init Advance Winner",
+        "Solved 600+ DSA problems",
+      ],
+    },
+    {
+      id: 5,
+      year: "2025",
+      title: "Founding Binary Beats",
+      subtitle: "Innovation & Collaboration",
+      description:
+        "Established Binary Beats, a collaborative team dedicated to building real-world projects. Focused on combining diverse domain expertise with strong technical skills to deliver innovative solutions. We also collectively participate in hackathons and coding contests.",
+      image: BinaryBeats,
+      icon: <Rocket className="w-6 h-6" />,
+      position: "left",
+      achievements: [
+        "Built team from ground up to 2+ members",
+        "Delivered 2+ successful projects",
+        "Achieved 90% + client satisfaction rate",
+      ],
+    }
   ];
 
   const initialStepCount = 6;
   const sortedSteps = journeySteps.sort(
-    (a, b) => parseInt(b.year) - parseInt(a.year)
+    (a, b) => b.id - a.id 
   );
   const displayedSteps = showFullJourney
     ? sortedSteps
-    : sortedSteps.slice(0, initialStepCount);
+    : sortedSteps.slice(0,initialStepCount);
 
   return (
     <section
       id="journey"
-      className="relative min-h-screen py-20 bg-gradient-light-main dark:bg-gradient-dark-main overflow-hidden"
+      className="relative min-h-screen py-20 bg-gradient-light-main dark:bg-gradient-dark-main overflow-hidden will-change-transform
+      md:py-20 sm:py-16 xs:py-12" 
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -135,7 +153,7 @@ const JourneySection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-light text-light-text dark:text-molten-gold mb-4 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-light text-light-text dark:text-molten-gold mb-4 leading-tight text-3xl sm:text-4xl"
             style={{
               fontFamily: "Inter, sans-serif",
               letterSpacing: "-0.02em",
@@ -152,7 +170,7 @@ const JourneySection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg text-light-muted dark:text-dark-text-muted max-w-2xl mx-auto font-light mt-6"
+            className="text-lg text-light-muted dark:text-dark-text-muted max-w-2xl mx-auto font-light mt-6 text-base sm:text-lg"
           >
             From curious beginner to tech entrepreneur - explore the milestones,
             challenges, and achievements that shaped my professional journey.
@@ -185,7 +203,7 @@ const JourneySection: React.FC = () => {
                       ? "lg:flex-row"
                       : "lg:flex-row-reverse"
                   } 
-                  // Mobile layout (always center-aligned)
+          
                   flex-col lg:flex-row`}
                 >
                   {/* Desktop Content side */}
@@ -193,7 +211,6 @@ const JourneySection: React.FC = () => {
                     className={`w-full lg:w-5/12 ${
                       step.position === "left" ? "lg:pr-8" : "lg:pl-8"
                     } 
-                    // Mobile: always full width with left padding for timeline
                     lg:block hidden`}
                   >
                     <motion.div

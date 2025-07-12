@@ -14,48 +14,38 @@ const TeamSection: React.FC = () => {
   // Destructure isDark from useTheme hook
   const { isDark } = useTheme();
 
-  const teamMembers = [
-       {
-      name: 'Ashay Gupta',
-      role: 'Backend Developer',
-      image: Ashay,
-      bio: 'Passionate backend developer with a strong command over Node.js, Express, REST APIs, and database design. Focused on building scalable and efficient server-side systems.',
-      social: {
-        linkedin: 'https://www.linkedin.com/in/ashay-gupta-30068831b/',
-        github: 'https://github.com/ashaygupta-cc'
-      }
-    },
-    {
-      name: 'Tarun Jain',
-      role: 'Frontend Developer',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Creative frontend developer skilled in building responsive user interfaces using React, Tailwind CSS, and modern web technologies.',
-      social: {
-        linkedin: 'https://www.linkedin.com/in/tarundeepakjain/',
-        github: 'https://github.com/tarunjain01'
-      }
-    },
-    {
-      name: 'Priyanshi Gupta',
-      role: 'UI/UX Designer',
-      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Experienced UI/UX designer creating intuitive and visually appealing user experiences. Proficient in Figma, Sketch, and Adobe XD.',
-      social: {
-        linkedin: '#',
-        github: '#'
-      }
-    },
-    {
-      name: 'Harshita Singh',
-      role: 'Data Scientist',
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Data scientist with expertise in machine learning, statistical modeling, and data visualization. Passionate about extracting insights from complex datasets.',
-      social: {
-        linkedin: '#',
-        github: '#'
-      }
+ const teamMembers = [
+  {
+    name: 'Ashay Gupta',
+    role: 'Backend Developer & Competitive Programmer',
+    image: Ashay,
+    bio: 'Passionate backend developer with a strong command over Node.js, Express, REST APIs, and database design. Also an avid competitive programmer, focused on optimizing algorithms and problem-solving. Building scalable and efficient server-side systems.',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/ashay-gupta-30068831b/',
+      github: 'https://github.com/ashaygupta-cc'
     }
-  ];
+  },
+  {
+    name: 'Tarun Jain',
+    role: 'Frontend Developer & Competitive Programmer',
+    image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
+    bio: 'Creative frontend developer skilled in building responsive user interfaces using React, Tailwind CSS, and modern web technologies. Actively involved in competitive programming, honing problem-solving skills and algorithmic thinking.',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/tarundeepakjain/',
+      github: 'https://github.com/tarunjain01'
+    }
+  },
+  {
+    name: 'Arpit Maheshwari',
+    role: 'Competitive Programmer', 
+    image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400',
+    bio: 'Dedicated competitive programmer with a knack for solving complex algorithmic challenges and optimizing code for efficiency. Focused on excelling in programming contests.',
+    social: {
+      linkedin: '#',
+      github: '#'
+    }
+  }
+];
 
   const handleOpenModal = (type: 'position' | 'resume') => {
     setModalType(type);
@@ -64,7 +54,6 @@ const TeamSection: React.FC = () => {
 
   return (
     <section id="team" className="relative min-h-screen py-20 bg-gradient-light-main dark:bg-gradient-dark-main overflow-hidden">
-      {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Light mode: subtle, peaceful elements */}
         <div className="absolute top-1/4 left-10 w-64 h-64 bg-light-crystal-blue rounded-full opacity-30 animate-float dark:hidden" />
@@ -195,18 +184,14 @@ const TeamSection: React.FC = () => {
               </motion.button>
 
               <motion.button
-                // Add a key that changes with the theme to force re-mount and reset framer-motion styles
                 key={`send-resume-${isDark}`}
                 onClick={() => handleOpenModal('resume')}
                 whileHover={{
                   scale: 1.02,
-                  // These colors are from your original code.
-                  // They will be applied on hover.
-                  borderColor: '#6366f1', // Original hover border color
-                  color: '#6366f1'        // Original hover text color
+                  borderColor: '#6366f1',
+                  color: '#6366f1'        
                 }}
                 whileTap={{ scale: 0.98 }}
-                // Dynamically apply text and border color classes based on theme
                 className={`
                   flex items-center justify-center space-x-2 px-8 py-4 border-2
                   ${isDark ? 'border-smoke-gray' : 'border-gray-300'}
