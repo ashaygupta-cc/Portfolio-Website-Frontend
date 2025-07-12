@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import BinaryBeats from "/Binary Beats logo.jpg";
 import StAloysius from "/St Aloysius.jpg";
+import CP from "/CP.jpg"
 import IIITV from "/IIITV.jpg";
 import JEE from "/JEE.jpg";
 
@@ -84,7 +85,7 @@ const JourneySection: React.FC = () => {
       subtitle: "CodeChef & Codeforces",
       description:
         "Actively participating in competitive programming contests on platforms like CodeChef and Codeforces, honing problem-solving skills and algorithmic thinking. Achieved 3-star rating on CodeChef in less than 5 months in first year & winning several coding contests also.",
-      image: "",
+      image: CP,
       icon: <Code className="w-6 h-6" />,
       position: "right",
       achievements: [

@@ -21,7 +21,7 @@ const ProjectsSection: React.FC = () => {
       title: 'Portfolio Website',
       description: 'Modern portfolio website with 3D animations, smooth transitions, and responsive design. Built with React and Three.js for an immersive user experience.',
       image: Portfolio,
-      technologies: ['React', 'Three.js', 'Tailwind CSS', 'Framer Motion'],
+      technologies: ['React', 'Three.js', 'Tailwind CSS', 'Framer Motion', 'Gsap'],
       demoUrl: 'https://portfolio-website-ashay.vercel.app/',
       githubUrl: '#'
     }
