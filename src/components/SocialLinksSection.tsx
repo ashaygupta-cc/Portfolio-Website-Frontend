@@ -35,23 +35,23 @@ const SocialLinksSection: React.FC = () => {
       description: 'Competitive programming profile and achievements'
     },
       {
+      name: 'LeetCode',
+      username: 'ashaygupta_cc',
+      url: 'https://leetcode.com/u/ashaygupta_cc/',
+      icon: <Trophy className="w-6 h-6" />,
+      color: 'from-light-crystal-blue to-light-crystal-purple',
+      bgColor: 'bg-gradient-to-br from-teal-50 to-green-50 dark:from-ashen-charcoal dark:to-smoke-gray',
+      description: 'Sharpening DSA problem-solving skills'
+    },
+      {
       name: 'Instagram',
       username: 'ashay.shiva',
       url: 'https://www.instagram.com/ashay.shiva?igsh=MWIxd3Zmd2U5anA0YQ==',
       icon: <Camera className="w-6 h-6" />,
-      color: 'from-light-accent-warm to-light-accent-gold', // Light theme color
+      color: 'from-light-accent-warm to-light-accent-gold', 
       bgColor: 'bg-gradient-to-br from-red-50 to-orange-50 dark:from-ashen-charcoal dark:to-smoke-gray',
       description: 'Personal life and creative content'
-    },
-      {
-      name: 'Spotify',
-      username: 'ashaygupta',
-      url: 'https://open.spotify.com/user/vamhgzxkc5pexfrrllfv9kqvu?si=ojqSWQz7Qxa-nhI_87kMzQ',
-      icon: <Music className="w-6 h-6" />,
-      color: 'from-light-crystal-blue to-light-crystal-purple', // Light theme color
-      bgColor: 'bg-gradient-to-br from-teal-50 to-green-50 dark:from-ashen-charcoal dark:to-smoke-gray',
-      description: 'Music playlists and discoveries'
-    },
+    }/*,
       {
       name: 'X (Twitter)',
       username: 'ashaygupta',
@@ -61,10 +61,10 @@ const SocialLinksSection: React.FC = () => {
           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
         </svg>
       ),
-      color: 'from-gray-400 to-gray-600', // Neutral color for X
+      color: 'from-gray-400 to-gray-600',
       bgColor: 'bg-gradient-to-br from-gray-50 to-gray-100 dark:from-ashen-charcoal dark:to-smoke-gray',
       description: 'Latest updates and tech thoughts'
-    }
+    }*/
   ];
 
   return (

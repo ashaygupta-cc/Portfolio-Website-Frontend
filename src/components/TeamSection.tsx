@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { Users, Plus, Send, Github,Linkedin } from 'lucide-react';
 import JobApplicationModal from './JobApplicationModal';
 import Ashay from '/Ashay.jpg'
-// Assuming useTheme is imported from '../contexts/ThemeContext' as in HeroSection
+import Tarun from '/Tarun.jpg'
+import Arpit from '/Arpit.jpg'
 import { useTheme } from '../contexts/ThemeContext';
 
 
@@ -11,7 +12,6 @@ const TeamSection: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalType, setModalType] = useState<'position' | 'resume'>('position');
 
-  // Destructure isDark from useTheme hook
   const { isDark } = useTheme();
 
  const teamMembers = [
@@ -28,20 +28,20 @@ const TeamSection: React.FC = () => {
   {
     name: 'Tarun Jain',
     role: 'Frontend Developer & Competitive Programmer',
-    image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: Tarun,
     bio: 'Creative frontend developer skilled in building responsive user interfaces using React, Tailwind CSS, and modern web technologies. Actively involved in competitive programming, honing problem-solving skills and algorithmic thinking.',
     social: {
       linkedin: 'https://www.linkedin.com/in/tarundeepakjain/',
-      github: 'https://github.com/tarunjain01'
+      github: 'https://github.com/tarundeepakjain'
     }
   },
   {
     name: 'Arpit Maheshwari',
     role: 'Competitive Programmer', 
-    image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: Arpit,
     bio: 'Dedicated competitive programmer with a knack for solving complex algorithmic challenges and optimizing code for efficiency. Focused on excelling in programming contests.',
     social: {
-      linkedin: '#',
+      linkedin: 'https://www.linkedin.com/in/arpit-maheshwari-bb59a2336',
       github: '#'
     }
   }
