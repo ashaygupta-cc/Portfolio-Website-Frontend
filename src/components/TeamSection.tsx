@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Users, Plus, Send, Github,Linkedin } from 'lucide-react';
 import JobApplicationModal from './JobApplicationModal';
-import Ashay from '/Ashay.jpg'
+import Ashay from '/Ashay Logo.jpg'
 import Tarun from '/Tarun.jpg'
 import Arpit from '/Arpit.jpg'
 import { useTheme } from '../contexts/ThemeContext';
