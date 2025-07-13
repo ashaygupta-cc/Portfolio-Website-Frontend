@@ -1,9 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import BinaryBeatsLogo from "./BinaryBeatsLogo";
-import AshayImg from "/Ashay.jpg";
+import AshayImgDark from "/Ashay DarkTheme.jpg";
+import AshayImgLight from "/Ashay LightTheme.jpg";
+import { useTheme } from "../contexts/ThemeContext"; 
 
 const AboutSection: React.FC = () => {
+  const { isDark } = useTheme();
   return (
     <section
       id="about"
@@ -66,7 +69,7 @@ const AboutSection: React.FC = () => {
             <div className="relative w-full max-w-md mx-auto">
               <div className="aspect-square rounded-3xl overflow-hidden bg-gradient-light-crystal dark:bg-gradient-ember shadow-light-shadow-lg dark:shadow-fire-glow">
                 <img
-                  src={AshayImg}
+                 src={isDark ? AshayImgDark : AshayImgLight}
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
