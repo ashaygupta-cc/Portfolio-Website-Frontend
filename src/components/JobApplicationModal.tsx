@@ -49,8 +49,8 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
       available: true,
       urgent: true,
       icon: <Code className="w-5 h-5" />,
-      color: 'from-light-crystal-blue to-light-crystal-purple', // Light theme color
-      bgColor: 'from-blue-50 to-cyan-50', // Light theme color
+      color: 'from-light-crystal-blue to-light-crystal-purple', 
+      bgColor: 'from-blue-50 to-cyan-50', 
       description: 'Join our frontend team to build amazing user interfaces. Share knowledge, learn together, and contribute to exciting projects.',
       skills: ['React/Vue', 'CSS/Tailwind', 'JavaScript', 'UI/UX'],
       benefits: ['Skill sharing', 'Flexible schedule', 'Project ownership', 'Learning opportunities']
@@ -66,8 +66,8 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
       available: true,
       urgent: false,
       icon: <Database className="w-5 h-5" />,
-      color: 'from-light-accent-gold to-light-accent-warm', // Light theme color
-      bgColor: 'from-green-50 to-emerald-50', // Light theme color
+      color: 'from-light-accent-gold to-light-accent-warm',
+      bgColor: 'from-green-50 to-emerald-50',
       description: 'Help build robust backend systems and APIs. Collaborate on architecture decisions and share in project success.',
       skills: ['Node.js/Python', 'Databases', 'APIs', 'Cloud Services'],
       benefits: ['Technical mentorship', 'Architecture input', 'Revenue sharing', 'Portfolio building']
@@ -83,8 +83,8 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
       available: true,
       urgent: false,
       icon: <Palette className="w-5 h-5" />,
-      color: 'from-light-crystal-purple to-light-crystal-blue', // Light theme color
-      bgColor: 'from-purple-50 to-pink-50', // Light theme color
+      color: 'from-light-crystal-purple to-light-crystal-blue', 
+      bgColor: 'from-purple-50 to-pink-50', 
       description: 'Create beautiful designs and user experiences. Work closely with developers and contribute to design systems.',
       skills: ['Figma/Sketch', 'UI/UX Design', 'Prototyping', 'Brand Design'],
       benefits: ['Creative freedom', 'Design leadership', 'Client interaction', 'Portfolio growth']
@@ -100,8 +100,8 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
       available: false,
       urgent: false,
       icon: <Cloud className="w-5 h-5" />,
-      color: 'from-light-accent-warm to-light-accent-gold', // Light theme color
-      bgColor: 'from-orange-50 to-red-50', // Light theme color
+      color: 'from-light-accent-warm to-light-accent-gold', 
+      bgColor: 'from-orange-50 to-red-50', 
       description: 'Help maintain and improve our deployment infrastructure. Share expertise in cloud technologies.',
       skills: ['AWS/GCP', 'Docker', 'CI/CD', 'Monitoring'],
       benefits: ['Infrastructure ownership', 'Learning budget', 'Certification support', 'Tech leadership']
@@ -117,8 +117,8 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
       available: false,
       urgent: false,
       icon: <Users className="w-5 h-5" />,
-      color: 'from-light-crystal-blue to-light-crystal-purple', // Light theme color
-      bgColor: 'from-indigo-50 to-purple-50', // Light theme color
+      color: 'from-light-crystal-blue to-light-crystal-purple',
+      bgColor: 'from-indigo-50 to-purple-50', 
       description: 'Shape product direction and strategy. Work with clients and team to define project requirements.',
       skills: ['Product Strategy', 'User Research', 'Analytics', 'Communication'],
       benefits: ['Strategic input', 'Client relationships', 'Business development', 'Leadership growth']
@@ -134,8 +134,8 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
       available: true,
       urgent: true,
       icon: <Star className="w-5 h-5" />,
-      color: 'from-light-accent-warm to-light-accent-gold', // Light theme color
-      bgColor: 'from-pink-50 to-rose-50', // Light theme color
+      color: 'from-light-accent-warm to-light-accent-gold', 
+      bgColor: 'from-pink-50 to-rose-50', 
       description: 'Help grow our brand and reach new clients. Create content, manage social media, and build our community.',
       skills: ['Content Creation', 'Social Media', 'SEO', 'Brand Strategy'],
       benefits: ['Creative projects', 'Brand building', 'Network growth', 'Marketing skills']
@@ -151,8 +151,8 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
       available: true,
       urgent: false,
       icon: <Shield className="w-5 h-5" />,
-      color: 'from-light-crystal-purple to-light-crystal-blue', // Light theme color
-      bgColor: 'from-teal-50 to-cyan-50', // Light theme color
+      color: 'from-light-crystal-purple to-light-crystal-blue', 
+      bgColor: 'from-teal-50 to-cyan-50', 
       description: 'Ensure our products meet the highest quality standards. Learn testing methodologies and automation.',
       skills: ['Manual Testing', 'Test Automation', 'Bug Tracking', 'User Testing'],
       benefits: ['Quality ownership', 'Testing expertise', 'Process improvement', 'Attention to detail']
@@ -168,8 +168,8 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
       available: false,
       urgent: false,
       icon: <Heart className="w-5 h-5" />,
-      color: 'from-light-accent-gold to-light-accent-warm', // Light theme color
-      bgColor: 'from-amber-50 to-orange-50', // Light theme color
+      color: 'from-light-accent-gold to-light-accent-warm', 
+      bgColor: 'from-amber-50 to-orange-50',
       description: 'Create engaging content for our blog, documentation, and marketing materials. Share your expertise.',
       skills: ['Technical Writing', 'Blogging', 'Documentation', 'Storytelling'],
       benefits: ['Thought leadership', 'Writing portfolio', 'Community building', 'Knowledge sharing']
@@ -380,7 +380,6 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
               {/* Floating glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${position.color} opacity-0 hover:opacity-10 transition-opacity duration-500 rounded-3xl`} />
               
-              {/* Urgent Badge */}
               {position.available && position.urgent && (
                 <motion.div 
                   initial={{ scale: 0 }}
@@ -392,14 +391,12 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
                 </motion.div>
               )}
 
-              {/* Unavailable Badge */}
               {!position.available && (
                 <div className="absolute -top-2 -right-2 px-2 py-1 md:px-3 md:py-1 bg-gray-400 text-white text-xs font-bold rounded-full">
                   CLOSED
                 </div>
               )}
 
-              {/* Floating Position Icon */}
               <motion.div 
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 className={`w-10 h-10 md:w-14 md:h-14 rounded-2xl flex items-center justify-center mb-3 md:mb-4 shadow-lg ${
@@ -411,7 +408,6 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
                 {position.icon}
               </motion.div>
 
-              {/* Position Info */}
               <div className="mb-3 md:mb-4 relative z-10">
                 <h3 className={`text-lg md:text-xl font-bold mb-1 md:mb-2 ${
                   position.available ? 'text-light-text dark:text-molten-gold' : 'text-gray-500 dark:text-dark-text-muted'
@@ -434,14 +430,12 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
                 </div>
               </div>
 
-              {/* Description */}
               <p className={`text-xs md:text-sm mb-3 md:mb-4 leading-relaxed ${
                 position.available ? 'text-light-muted dark:text-dark-text-muted' : 'text-gray-400 dark:text-dark-text-muted'
               }`}>
                 {position.description}
               </p>
 
-              {/* Skills */}
               <div className="mb-3 md:mb-4">
                 <p className={`text-xs font-semibold mb-2 ${
                   position.available ? 'text-light-muted dark:text-dark-text-muted' : 'text-gray-400 dark:text-dark-text-muted'
@@ -473,7 +467,6 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
                 </div>
               </div>
 
-              {/* Benefits */}
               <div className="mb-3 md:mb-4">
                 <p className={`text-xs font-semibold mb-2 ${
                   position.available ? 'text-light-muted dark:text-dark-text-muted' : 'text-gray-400 dark:text-dark-text-muted'
@@ -495,8 +488,7 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
                   ))}
                 </div>
               </div>
-
-              {/* Join Button */}
+           
               <div className="mt-auto">
                 {position.available ? (
                   <motion.div 
@@ -520,7 +512,6 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
           ))}
         </div>
 
-        {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -551,7 +542,7 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
 
   const renderFormView = () => (
     <>
-      {/* Header - Compact for mobile */}
+      {/* Header for mobile */}
       <div className="bg-gradient-to-r from-light-crystal-purple to-light-crystal-blue dark:from-inferno-orange dark:to-crimson-blaze text-white p-3 md:p-6 rounded-t-3xl flex-shrink-0">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -591,7 +582,6 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
 
       {/* Form Content */}
       <div className="flex-1 overflow-y-auto p-4 md:p-6 bg-light-bg dark:bg-dark-bg">
-        {/* Status Messages */}
         {submitStatus.isSuccess && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
@@ -615,7 +605,6 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
-          {/* Personal Information */}
           <div className="bg-light-surface dark:bg-dark-card rounded-2xl p-4 md:p-6">
             <h3 className="text-base md:text-lg font-medium text-light-text dark:text-molten-gold mb-3 md:mb-4 flex items-center">
               <User className="w-4 h-4 md:w-5 h-5 mr-2 text-light-crystal-purple dark:text-molten-gold" />

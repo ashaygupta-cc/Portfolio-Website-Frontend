@@ -127,7 +127,6 @@ const JourneySection: React.FC = () => {
       className="relative min-h-screen py-20 bg-gradient-light-main dark:bg-gradient-dark-main overflow-hidden will-change-transform
       md:py-20 sm:py-16 xs:py-12" 
     >
-      {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Light mode: subtle, peaceful elements */}
         <div className="absolute top-1/4 left-10 w-64 h-64 bg-light-crystal-blue rounded-full opacity-10 animate-float dark:hidden" />
@@ -147,7 +146,6 @@ const JourneySection: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -182,15 +180,13 @@ const JourneySection: React.FC = () => {
           </motion.p>
         </motion.div>
 
-        {/* Journey Timeline */}
         <div className="relative">
-          {/* Central timeline line - Desktop */}
+          {/* Central timeline - Desktop */}
           <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-light-crystal-blue via-light-crystal-purple to-light-crystal-blue dark:from-inferno-orange dark:via-crimson-blaze dark:to-molten-gold opacity-30" />
 
-          {/* Central timeline line - Mobile */}
+          {/* Central timeline - Mobile */}
           <div className="lg:hidden absolute left-8 w-1 h-full bg-gradient-to-b from-light-crystal-blue via-light-crystal-purple to-light-crystal-blue dark:from-inferno-orange dark:via-crimson-blaze dark:to-molten-gold opacity-30" />
 
-          {/* Journey steps */}
           <div className="space-y-24 lg:space-y-24">
             <AnimatePresence>
               {displayedSteps.map((step, index) => (
@@ -203,7 +199,6 @@ const JourneySection: React.FC = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   className={`relative flex items-center ${
-                    // Desktop layout (unchanged)
                     step.position === "left"
                       ? "lg:flex-row"
                       : "lg:flex-row-reverse"
@@ -226,7 +221,6 @@ const JourneySection: React.FC = () => {
                       }}
                       className="bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl p-8 shadow-light-shadow-lg dark:shadow-lg hover:shadow-light-shadow-xl dark:hover:shadow-2xl hover:border-light-crystal-blue dark:hover:border-inferno-orange transition-all duration-500"
                     >
-                      {/* Year badge */}
                       <div className="flex items-center mb-4">
                         <div className="w-12 h-12 bg-light-crystal-blue/20 dark:bg-ember-red rounded-2xl flex items-center justify-center text-light-crystal-purple dark:text-molten-gold mr-4">
                           {step.icon}
@@ -247,9 +241,7 @@ const JourneySection: React.FC = () => {
                       <p className="text-light-muted dark:text-dark-text-muted leading-relaxed mb-6 font-light">
                         {step.description}
                       </p>
-
-                      {/* Achievements */}
-                     
+           
                       <div className="space-y-2">
                        { step.achievements && step.achievements.length > 0 && (
                         <p className="text-sm font-medium text-light-muted dark:text-dark-text-muted mb-3">
@@ -326,7 +318,7 @@ const JourneySection: React.FC = () => {
                     </motion.div>
                   </div>
 
-                  {/* Mobile timeline node */}
+            
                   <div className="lg:hidden absolute left-6 top-8">
                     <motion.div
                       initial={{ scale: 0 }}
@@ -338,8 +330,7 @@ const JourneySection: React.FC = () => {
                       <div className="absolute inset-0 w-4 h-4 bg-light-crystal-blue dark:bg-inferno-orange rounded-full animate-ping opacity-20" />
                     </motion.div>
                   </div>
-
-                  {/* Desktop Image side */}
+   
                   <div
                     className={`hidden lg:block w-5/12 ${
                       step.position === "left" ? "pl-8" : "pr-8"
@@ -368,19 +359,16 @@ const JourneySection: React.FC = () => {
                           </span>
                         </div>
 
-                        {/* Location pin */}
                         <div className="absolute bottom-4 right-4 w-10 h-10 bg-light-crystal-purple dark:bg-inferno-orange rounded-full flex items-center justify-center text-white">
                           <MapPin className="w-5 h-5" />
                         </div>
                       </div>
 
-                      {/* Decorative elements */}
                       <div className="absolute -top-2 -right-2 w-4 h-4 bg-light-crystal-blue dark:bg-inferno-orange rounded-full opacity-60" />
                       <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-light-crystal-purple dark:bg-crimson-blaze rounded-full opacity-60" />
                     </motion.div>
                   </div>
 
-                  {/* Mobile Image - Integrated in card */}
                   <div className="lg:hidden w-full pl-16 pr-4 mt-4">
                     <motion.div
                       whileHover={{
@@ -410,7 +398,6 @@ const JourneySection: React.FC = () => {
           </div>
         </div>
 
-        {/* Future vision */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

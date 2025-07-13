@@ -1,11 +1,10 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Camera, ExternalLink, Github, Linkedin, MessageCircle, Music, Trophy } from 'lucide-react';
 import React from 'react';
-import { useTheme } from '../contexts/ThemeContext'; // Assuming useTheme is available
+import { useTheme } from '../contexts/ThemeContext';
 
 const SocialLinksSection: React.FC = () => {
-  const { isDark } = useTheme(); // Get the current theme state
-
+  const { isDark } = useTheme(); 
   const socialPlatforms = [
         {
       name: 'GitHub',
@@ -69,7 +68,6 @@ const SocialLinksSection: React.FC = () => {
 
   return (
     <section id="social"  className="relative min-h-screen py-20 bg-gradient-light-main dark:bg-gradient-dark-main overflow-hidden will-change-transform md:py-20 sm:py-16 xs:py-12">
-      {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Light mode: subtle, peaceful elements */}
         <div className="absolute top-1/4 left-10 w-64 h-64 bg-light-crystal-blue rounded-full opacity-10 animate-float dark:hidden" />
@@ -140,10 +138,8 @@ const SocialLinksSection: React.FC = () => {
                 }}
                 className={`group relative p-6 rounded-3xl border-2 border-gray-200/50 dark:border-smoke-gray/50 shadow-light-shadow-lg dark:shadow-lg hover:shadow-light-shadow-xl dark:hover:shadow-2xl hover:border-light-crystal-blue dark:hover:border-inferno-orange transition-all duration-500 flex items-center space-x-4 ${platform.bgColor}`}
               >
-                {/* Floating glow effect */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${platform.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-3xl`} />
 
-                {/* Icon */}
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   className={`w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg bg-gradient-to-br ${platform.color} text-white dark:bg-gradient-inferno flex-shrink-0`}
@@ -151,7 +147,6 @@ const SocialLinksSection: React.FC = () => {
                   {platform.icon}
                 </motion.div>
 
-                {/* Content */}
                 <div className="relative z-10">
                   <h3 className="text-xl font-bold text-light-text dark:text-molten-gold mb-1 group-hover:text-light-crystal-purple dark:group-hover:text-inferno-orange transition-colors duration-300">
                     {platform.name}
@@ -162,12 +157,10 @@ const SocialLinksSection: React.FC = () => {
                   </p>
                 </div>
 
-                {/* External link icon */}
                 <div className="absolute top-4 right-4 w-8 h-8 bg-white/90 dark:bg-ashen-charcoal backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <ExternalLink className="w-4 h-4 text-gray-700 dark:text-dark-text-muted" />
                 </div>
 
-                {/* Decorative elements */}
                 <div className="absolute top-4 left-4 w-1 h-1 bg-light-crystal-blue dark:bg-inferno-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-6 right-6 w-1 h-1 bg-light-crystal-purple dark:bg-crimson-blaze rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ transitionDelay: '100ms' }} />
               </motion.a>
@@ -207,7 +200,6 @@ const SocialLinksSection: React.FC = () => {
               </motion.button>
 
               <motion.button
-                // Add a key that changes with the theme to force re-mount and reset framer-motion styles
                 key={`follow-platforms-${isDark}`}
                 whileHover={{
                   scale: 1.02,

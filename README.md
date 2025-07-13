@@ -4,7 +4,7 @@ A modern, interactive portfolio website with 3D animations and backend email fun
 
 ## Features
 
-- 🎨 Modern design with 3D animations using Three.js
+- 🎨 Modern design with 3D animations using Three.js & Gsap
 - 📱 Fully responsive across all devices
 - 📧 Working contact form with email notifications
 - ⚡ Fast performance with Vite

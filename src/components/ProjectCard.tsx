@@ -38,7 +38,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       onHoverEnd={() => setIsHovered(false)}
       className="group relative bg-light-surface/80 dark:bg-dark-card/80 backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl hover:border-light-crystal-blue dark:hover:border-inferno-orange shadow-light-shadow-lg dark:shadow-fire-glow hover:shadow-light-shadow-xl dark:hover:shadow-inferno-glow transition-all duration-500 overflow-hidden"
     >
-      {/* Image and overlay */}
       <div className="relative h-48 overflow-hidden">
         <img 
           src={image} 
@@ -47,7 +46,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         
-        {/* Action buttons on hover */}
         <div className="absolute inset-0 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <motion.a
             href={demoUrl}
@@ -70,7 +68,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
       
-      {/* Content */}
       <div className="p-6">
         <motion.h3
           whileHover={{ scale: 1.02 }}
@@ -83,7 +80,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {description}
         </p>
 
-        {/* Technologies */}
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech) => (
             <span 
@@ -96,7 +92,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
       
-      {/* Subtle corner accents */}
       <div className="absolute top-4 left-4 w-1 h-1 bg-light-crystal-blue dark:bg-inferno-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="absolute top-4 right-4 w-1 h-1 bg-light-crystal-purple dark:bg-crimson-blaze rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ transitionDelay: '100ms' }} />
       <div className="absolute bottom-4 left-4 w-1 h-1 bg-light-crystal-blue dark:bg-molten-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ transitionDelay: '200ms' }} />

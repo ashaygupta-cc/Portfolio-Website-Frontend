@@ -7,7 +7,7 @@ const Navigation: React.FC = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [navOpacity, setNavOpacity] = useState(1); // New state for navigation opacity
+  const [navOpacity, setNavOpacity] = useState(1); 
 
   const navItems = [
     { id: 'home', label: 'HOME' },

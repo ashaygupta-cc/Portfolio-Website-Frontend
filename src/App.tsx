@@ -14,18 +14,15 @@ import SocialLinksSection from './components/SocialLinksSection';
 import ContactSection from './components/ContactSection';
 import TechExpertiseSection from './components/TechExpertiseSection';
 
-// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   useEffect(() => {
-    // Smooth scrolling setup
     gsap.to(window, {
       scrollTo: { y: 0, autoKill: false },
       duration: 0
     });
 
-    // Section transition animations
     const sections = document.querySelectorAll('section');
     sections.forEach((section) => {
       gsap.fromTo(section, 

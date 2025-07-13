@@ -7,10 +7,8 @@ const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      // Updated to use gradient-light-main for light mode and gradient-dark-main for dark mode
      className="relative min-h-screen py-20 pt-20 pb-0.4 bg-gradient-light-main dark:bg-gradient-dark-main will-change-transform"
     >
-      {/* Background decorative elements - adjusted for theme or kept for dark theme feel */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Light mode: subtle, peaceful elements */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-light-crystal-blue rounded-full opacity-10 animate-float blur-xl dark:hidden" />
@@ -66,7 +64,6 @@ const AboutSection: React.FC = () => {
             className="relative"
           >
             <div className="relative w-full max-w-md mx-auto">
-              {/* Adjusted background for theme */}
               <div className="aspect-square rounded-3xl overflow-hidden bg-gradient-light-crystal dark:bg-gradient-ember shadow-light-shadow-lg dark:shadow-fire-glow">
                 <img
                   src={AshayImg}
@@ -83,8 +80,7 @@ const AboutSection: React.FC = () => {
                   delay: 0.5,
                   type: "spring",
                   stiffness: 100,
-                }}
-                // Adjusted background color for theme
+                }}              
                 className="absolute -bottom-4 -right-4 p-4 bg-light-surface dark:bg-ashen-charcoal rounded-2xl shadow-light-shadow-md dark:shadow-ember-glow border border-gray-200/50 dark:border-smoke-gray"
               >
                 <BinaryBeatsLogo size="medium" showText={false} />
@@ -132,7 +128,6 @@ const AboutSection: React.FC = () => {
               ].map((tech) => (
                 <span
                   key={tech}
-                  // Adjusted background and text for theme
                   className="px-4 py-2 bg-gradient-to-r from-light-crystal-purple to-light-crystal-blue text-white dark:bg-gradient-ember dark:text-lava-black rounded-full text-sm font-medium shadow-light-shadow-md dark:shadow-molten-glow"
                 >
                   {tech}
