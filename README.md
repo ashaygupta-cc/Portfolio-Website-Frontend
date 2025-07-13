@@ -137,4 +137,4 @@ Make sure to:
 
 ## Support
 
-For questions or issues, please contact hello@binarybeats.dev
+For questions or issues, please contact ashay051204@gmail.com
