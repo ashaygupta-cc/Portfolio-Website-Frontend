@@ -1,4 +1,4 @@
-# Ashay Gupta Portfolio
+# My Portfolio
 
 A modern, interactive portfolio website with 3D animations and backend email functionality.
 
