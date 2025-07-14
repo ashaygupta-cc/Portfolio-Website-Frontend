@@ -1,4 +1,4 @@
-# Ashay Gupta Portfolio
+# My Portfolio
 
 A modern, interactive portfolio website with 3D animations and backend email functionality.
 
@@ -137,4 +137,4 @@ Make sure to:
 
 ## Support
 
-For questions or issues, please contact hello@binarybeats.dev
+For questions or issues, please contact ashay051204@gmail.com
