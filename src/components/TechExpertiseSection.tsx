@@ -374,7 +374,7 @@ const TechExpertiseSection: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                    className="bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl p-4 sm:p-6 text-center shadow-light-shadow-lg dark:shadow-lg hover:shadow-light-shadow-xl dark:hover:shadow-2xl hover:border-light-crystal-blue dark:hover:border-gray-600 transition-all duration-500 group max-w-[30%]" // Added max-w-[30%] here
+                    className="w-full lg:w-[calc(33.333333%-20px)] bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl p-4 sm:p-6 text-center shadow-light-shadow-lg dark:shadow-lg hover:shadow-light-shadow-xl dark:hover:shadow-2xl hover:border-light-crystal-blue dark:hover:border-gray-600 transition-all duration-500 group"
                   >
                     <div className="w-16 h-16 bg-light-crystal-blue/20 dark:bg-ember-red rounded-2xl flex items-center justify-center mx-auto mb-4 text-light-crystal-purple dark:text-gray-300">
                       {skill.icon}
@@ -449,7 +449,7 @@ const TechExpertiseSection: React.FC = () => {
                       className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                         activeCategory === category
                           ? "bg-gradient-to-r from-light-crystal-purple to-light-crystal-blue text-white dark:bg-gradient-inferno shadow-light-shadow-md dark:shadow-fire-glow"
-                          : "bg-light-surface dark:bg-ashen-charcoal text-light-muted dark:text-dark-text-muted  hover:bg-gray-100 dark:hover:bg-smoke-gray"
+                          : "bg-light-surface dark:bg-ashen-charcoal text-light-muted dark:text-dark-text-muted  hover:bg-gray-100 dark:hover:bg-smoke-gray"
                       }`}
                     >
                       {category === "softSkills"
@@ -476,6 +476,7 @@ const TechExpertiseSection: React.FC = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, delay: index * 0.05 }}
                       whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
                       className="flex flex-col p-3 bg-light-surface dark:bg-ashen-charcoal border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-light-crystal-blue dark:hover:border-gray-500 hover:shadow-light-shadow-md dark:hover:shadow-gray-700 transition-all duration-300"
                     >
                       <div className="flex items-center justify-between mb-2 md:justify-start md:space-x-2 md:mb-0">

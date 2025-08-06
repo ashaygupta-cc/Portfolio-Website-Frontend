@@ -42,7 +42,7 @@ const CertificationsSection: React.FC = () => {
       issued: "June 2025",
       description:
         "Covers core data manipulation techniques using Pandas, including filtering, grouping, and transforming data in DataFrames.",
-    }
+    },
     /*,
     {
       name: "Intermediate Machine Learning",
@@ -167,89 +167,89 @@ const CertificationsSection: React.FC = () => {
           </motion.p>
         </motion.div>
 
-      <div className="flex flex-wrap justify-center gap-8 mb-16">
-  <AnimatePresence>
-    {displayedCertifications.map((cert, index) => (
-      <motion.div
-        key={cert.name}
-        initial={{ opacity: 0, y: 50, rotate: Math.random() * 6 - 3 }}
-        whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-        transition={{
-          duration: 0.8,
-          delay: index * 0.1,
-          type: "spring",
-          stiffness: 100,
-        }}
-        whileHover={{
-          y: -12,
-          rotate: Math.random() * 4 - 2,
-          scale: 1.02,
-          transition: { duration: 0.3 },
-        }}
-        className="w-full md:w-[45%] lg:w-[30%] max-w-[30%] group relative"
-      >
-        <div className="relative p-6 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl overflow-hidden hover:border-light-crystal-blue dark:hover:border-inferno-orange hover:shadow-light-shadow-lg dark:hover:shadow-fire-glow transition-all duration-500">
-          <div className="absolute inset-0 bg-gradient-to-br from-light-crystal-blue/20 to-light-crystal-purple/20 dark:from-inferno-orange/20 dark:to-crimson-blaze/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-          <div className="relative mb-6 overflow-hidden rounded-2xl">
-            <img
-              src={cert.image}
-              alt={cert.name}
-              className="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-
-            <div className="absolute top-3 right-3 w-10 h-10 bg-light-surface dark:bg-ashen-charcoal rounded-full flex items-center justify-center text-light-crystal-purple dark:text-gray-300">
-              {cert.icon}
-            </div>
-
-            <div className="absolute bottom-3 left-3 px-3 py-1 bg-light-surface dark:bg-ashen-charcoal backdrop-blur-sm rounded-full text-xs font-medium text-light-muted dark:text-dark-text-muted">
-              {cert.issued}
-            </div>
-          </div>
-
-          <div className="relative z-10">
-            <div className="flex items-start justify-between mb-3">
-              <div className="flex-1">
-                <h3 className="text-lg font-medium text-light-text dark:text-gray-300 mb-1 group-hover:text-light-crystal-blue dark:group-hover:text-inferno-orange transition-colors duration-300 leading-tight">
-                  {cert.name}
-                </h3>
-                <p className="text-light-crystal-purple dark:text-crimson-blaze font-medium text-sm">
-                  {cert.provider}
-                </p>
-              </div>
-
-              <motion.a
-                href={cert.credentialUrl}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-8 h-8 bg-gray-100 dark:bg-smoke-gray rounded-full flex items-center justify-center hover:bg-light-crystal-blue/20 dark:hover:bg-gray-600 transition-colors duration-300 ml-3"
-                title="View Credential"
+        <div className="flex flex-wrap justify-center gap-8 mb-16">
+          <AnimatePresence>
+            {displayedCertifications.map((cert, index) => (
+              <motion.div
+                key={cert.name}
+                initial={{ opacity: 0, y: 50, rotate: Math.random() * 6 - 3 }}
+                whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.1,
+                  type: "spring",
+                  stiffness: 100,
+                }}
+                whileHover={{
+                  y: -12,
+                  rotate: Math.random() * 4 - 2,
+                  scale: 1.02,
+                  transition: { duration: 0.3 },
+                }}
+                className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)] group relative"
               >
-                <ExternalLink className="w-4 h-4 text-gray-600 dark:text-gray-300 hover:text-light-crystal-blue dark:hover:text-gray-300" />
-              </motion.a>
-            </div>
+                <div className="relative p-6 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl overflow-hidden hover:border-light-crystal-blue dark:hover:border-inferno-orange hover:shadow-light-shadow-lg dark:hover:shadow-fire-glow transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-br from-light-crystal-blue/20 to-light-crystal-purple/20 dark:from-inferno-orange/20 dark:to-crimson-blaze/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-            <p className="text-light-muted dark:text-dark-text-muted text-sm leading-relaxed font-light">
-              {cert.description}
-            </p>
-          </div>
+                  <div className="relative mb-6 overflow-hidden rounded-2xl">
+                    <img
+                      src={cert.image}
+                      alt={cert.name}
+                      className="w-full h-32 object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
 
-          {/* Decorative glow dots */}
-          <div className="absolute top-2 left-2 w-1 h-1 bg-light-crystal-blue dark:bg-inferno-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          <div
-            className="absolute top-4 right-8 w-1 h-1 bg-light-crystal-purple dark:bg-crimson-blaze rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            style={{ transitionDelay: "100ms" }}
-          />
-          <div
-            className="absolute bottom-6 left-6 w-1 h-1 bg-light-crystal-blue dark:bg-molten-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            style={{ transitionDelay: "200ms" }}
-          />
+                    <div className="absolute top-3 right-3 w-10 h-10 bg-light-surface dark:bg-ashen-charcoal rounded-full flex items-center justify-center text-light-crystal-purple dark:text-gray-300">
+                      {cert.icon}
+                    </div>
+
+                    <div className="absolute bottom-3 left-3 px-3 py-1 bg-light-surface dark:bg-ashen-charcoal backdrop-blur-sm rounded-full text-xs font-medium text-light-muted dark:text-dark-text-muted">
+                      {cert.issued}
+                    </div>
+                  </div>
+
+                  <div className="relative z-10">
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="flex-1">
+                        <h3 className="text-lg font-medium text-light-text dark:text-gray-300 mb-1 group-hover:text-light-crystal-blue dark:group-hover:text-inferno-orange transition-colors duration-300 leading-tight">
+                          {cert.name}
+                        </h3>
+                        <p className="text-light-crystal-purple dark:text-crimson-blaze font-medium text-sm">
+                          {cert.provider}
+                        </p>
+                      </div>
+
+                      <motion.a
+                        href={cert.credentialUrl}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="w-8 h-8 bg-gray-100 dark:bg-smoke-gray rounded-full flex items-center justify-center hover:bg-light-crystal-blue/20 dark:hover:bg-gray-600 transition-colors duration-300 ml-3"
+                        title="View Credential"
+                      >
+                        <ExternalLink className="w-4 h-4 text-gray-600 dark:text-gray-300 hover:text-light-crystal-blue dark:hover:text-gray-300" />
+                      </motion.a>
+                    </div>
+
+                    <p className="text-light-muted dark:text-dark-text-muted text-sm leading-relaxed font-light">
+                      {cert.description}
+                    </p>
+                  </div>
+
+                  {/* Decorative glow dots */}
+                  <div className="absolute top-2 left-2 w-1 h-1 bg-light-crystal-blue dark:bg-inferno-orange rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div
+                    className="absolute top-4 right-8 w-1 h-1 bg-light-crystal-purple dark:bg-crimson-blaze rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ transitionDelay: "100ms" }}
+                  />
+                  <div
+                    className="absolute bottom-6 left-6 w-1 h-1 bg-light-crystal-blue dark:bg-molten-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ transitionDelay: "200ms" }}
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
-      </motion.div>
-    ))}
-  </AnimatePresence>
-</div>
 
 
         <motion.div
