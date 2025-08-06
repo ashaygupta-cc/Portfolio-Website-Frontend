@@ -94,7 +94,7 @@ const TechExpertiseSection: React.FC = () => {
       {
         name: "React.js",
         icon: "⚛️",
-        percentage: 100,
+        percentage: 90,
         barGradient: "from-blue-300 to-purple-400",
       },
       {
@@ -112,13 +112,13 @@ const TechExpertiseSection: React.FC = () => {
       {
         name: "CSS3",
         icon: "🎨",
-        percentage: 100,
+        percentage: 90,
         barGradient: "from-blue-300 to-purple-400",
       },
       {
         name: "Tailwind CSS",
         icon: "💨",
-        percentage: 100,
+        percentage: 90,
         barGradient: "from-blue-300 to-purple-400",
       },
       {
@@ -130,7 +130,7 @@ const TechExpertiseSection: React.FC = () => {
       {
         name: "Next.js",
         icon: "⚡",
-        percentage: 100,
+        percentage: 94,
         barGradient: "from-blue-300 to-purple-400",
       },
       {
@@ -144,13 +144,13 @@ const TechExpertiseSection: React.FC = () => {
       {
         name: "Node.js",
         icon: "🟢",
-        percentage: 100,
+        percentage: 84,
         barGradient: "from-purple-400 to-pink-400",
       },
       {
         name: "Express.js",
         icon: "🚀",
-        percentage: 100,
+        percentage: 92,
         barGradient: "from-purple-400 to-pink-400",
       },
       {
@@ -162,31 +162,31 @@ const TechExpertiseSection: React.FC = () => {
       {
         name: "REST APIs",
         icon: "🔗",
-        percentage: 100,
+        percentage: 95,
         barGradient: "from-purple-400 to-pink-400",
       },
       {
         name: "GraphQL",
         icon: "🌐",
-        percentage: 90,
+        percentage: 86,
         barGradient: "from-purple-400 to-pink-400",
       },
       {
         name: "MongoDB",
         icon: "🍃",
-        percentage: 100,
+        percentage: 95,
         barGradient: "from-purple-400 to-pink-400",
       },
       {
-        name: "PostgreSQL",
+        name: "Supabase",
         icon: "�",
-        percentage: 90,
+        percentage: 88,
         barGradient: "from-purple-400 to-pink-400",
       },
       {
         name: "Firebase",
         icon: "🔥",
-        percentage: 100,
+        percentage: 85,
         barGradient: "from-purple-400 to-pink-400",
       },
     ],
@@ -194,37 +194,37 @@ const TechExpertiseSection: React.FC = () => {
       {
         name: "Git & GitHub",
         icon: "🐙",
-        percentage: 100,
+        percentage: 90,
         barGradient: "from-blue-300 to-purple-400",
       },
       {
         name: "VS Code",
         icon: "💻",
-        percentage: 100,
+        percentage: 90,
         barGradient: "from-blue-300 to-purple-400",
       },
       {
         name: "Chrome DevTools",
         icon: "🔧",
-        percentage: 90,
+        percentage: 85,
         barGradient: "from-blue-300 to-purple-400",
       },
       {
         name: "Figma",
         icon: "📐",
-        percentage: 95,
+        percentage: 85,
         barGradient: "from-blue-300 to-purple-400",
       },
       {
         name: "Postman",
         icon: "📮",
-        percentage: 100,
+        percentage: 95,
         barGradient: "from-blue-300 to-purple-400",
       },
       {
         name: "Vercel",
         icon: "▲",
-        percentage: 100,
+        percentage: 90,
         barGradient: "from-blue-300 to-purple-400",
       },
       {
@@ -234,9 +234,9 @@ const TechExpertiseSection: React.FC = () => {
         barGradient: "from-blue-300 to-purple-400",
       },
       {
-        name: "Cloudinary",
+        name: "Cloud",
         icon: "☁️",
-        percentage: 100,
+        percentage: 85,
         barGradient: "from-blue-300 to-purple-400",
       },
     ],
@@ -244,7 +244,7 @@ const TechExpertiseSection: React.FC = () => {
       {
         name: "Problem Solving",
         icon: "💡",
-        percentage: 100,
+        percentage: 96,
         barGradient: "from-yellow-200 to-orange-400",
       },
       {
@@ -256,25 +256,25 @@ const TechExpertiseSection: React.FC = () => {
       {
         name: "Communication",
         icon: "🗣️",
-        percentage: 95,
+        percentage: 90,
         barGradient: "from-yellow-200 to-orange-400",
       },
       {
         name: "Project Management",
         icon: "📋",
-        percentage: 100,
+        percentage: 96,
         barGradient: "from-yellow-200 to-orange-400",
       },
       {
         name: "Creativity",
         icon: "🎨",
-        percentage: 100,
+        percentage: 88,
         barGradient: "from-yellow-200 to-orange-400",
       },
       {
         name: "Adaptability",
         icon: "🔄",
-        percentage: 100,
+        percentage: 90,
         barGradient: "from-yellow-200 to-orange-400",
       },
       {
@@ -286,13 +286,13 @@ const TechExpertiseSection: React.FC = () => {
       {
         name: "Time Management",
         icon: "⏰",
-        percentage: 100,
+        percentage: 93,
         barGradient: "from-yellow-200 to-orange-400",
       },
       {
         name: "Critical Thinking",
         icon: "🧠",
-        percentage: 100,
+        percentage: 90,
         barGradient: "from-yellow-200 to-orange-400",
       },
     ],
