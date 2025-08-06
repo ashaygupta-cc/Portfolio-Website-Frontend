@@ -21,7 +21,7 @@ const JourneySection: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setCarouselDuration(20);
+        setCarouselDuration(15);
       } else {
         setCarouselDuration(15);
       }
