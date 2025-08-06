@@ -50,7 +50,7 @@ const BinaryBeatsLogo: React.FC<BinaryBeatsLogoProps> = ({
         <span 
           className={`${textSizeClasses[size]} font-semibold tracking-wide 
             ${isDark 
-              ? 'text-molten-gold animate-fire-flicker' 
+              ? 'text-gray-300 animate-fire-flicker' 
               : 'text-light-text'
             }`}
         >

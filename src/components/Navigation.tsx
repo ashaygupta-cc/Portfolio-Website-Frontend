@@ -16,7 +16,7 @@ const Navigation: React.FC = () => {
     { id: 'projects', label: 'PROJECTS' },
     { id: 'certifications', label: 'CERTS' },
     { id: 'resume', label: 'RESUME' },
-    { id: 'team', label: 'TEAM' },
+    // { id: 'team', label: 'TEAM' },
     { id: 'social', label: 'SOCIAL' },
     { id: 'contact', label: 'CONTACT' }
   ];
@@ -109,7 +109,7 @@ const Navigation: React.FC = () => {
                 {activeSection === item.id && (
                   <motion.span
                     layoutId="underline"
-                    className="absolute bottom-0 left-0 w-full h-0.5 bg-light-crystal-purple dark:bg-molten-gold rounded-full"
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-light-crystal-purple dark:bg-gray-300 rounded-full"
                   />
                 )}
               </motion.button>

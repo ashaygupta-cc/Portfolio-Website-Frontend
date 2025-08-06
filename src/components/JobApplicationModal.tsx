@@ -335,7 +335,7 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-lg md:text-2xl font-bold mb-1 md:mb-2">Join Our Collaborative Team</h2>
-            <p className="text-purple-100 dark:text-molten-gold text-sm md:text-base">
+            <p className="text-purple-100 dark:text-gray-300 text-sm md:text-base">
               Work together, share success, and build amazing projects as a team
             </p>
           </div>
@@ -410,7 +410,7 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
 
               <div className="mb-3 md:mb-4 relative z-10">
                 <h3 className={`text-lg md:text-xl font-bold mb-1 md:mb-2 ${
-                  position.available ? 'text-light-text dark:text-molten-gold' : 'text-gray-500 dark:text-dark-text-muted'
+                  position.available ? 'text-light-text dark:text-gray-300' : 'text-gray-500 dark:text-dark-text-muted'
                 }`}>
                   {position.title}
                 </h3>
@@ -424,7 +424,7 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
                   <p className={position.available ? 'text-light-muted dark:text-dark-text-muted' : 'text-gray-400 dark:text-dark-text-muted'}>
                     📚 {position.experience}
                   </p>
-                  <p className={`font-semibold ${position.available ? 'text-green-600 dark:text-molten-gold' : 'text-gray-400 dark:text-dark-text-muted'}`}>
+                  <p className={`font-semibold ${position.available ? 'text-green-600 dark:text-gray-300' : 'text-gray-400 dark:text-dark-text-muted'}`}>
                     ⏰ {position.commitment}
                   </p>
                 </div>
@@ -519,9 +519,9 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
           className="mt-6 md:mt-8 p-4 md:p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-smoke-gray/50 dark:to-ashen-charcoal/50 rounded-3xl border border-light-crystal-blue/50 dark:border-smoke-gray text-center"
         >
           <div className="w-12 h-12 md:w-16 md:h-16 bg-light-crystal-blue/20 dark:bg-ember-red rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
-            <Heart className="w-6 h-6 md:w-8 md:h-8 text-light-crystal-purple dark:text-molten-gold" />
+            <Heart className="w-6 h-6 md:w-8 md:h-8 text-light-crystal-purple dark:text-gray-300" />
           </div>
-          <h3 className="text-lg md:text-lg font-semibold text-light-text dark:text-molten-gold mb-2">
+          <h3 className="text-lg md:text-lg font-semibold text-light-text dark:text-gray-300 mb-2">
             Don't see your perfect collaboration?
           </h3>
           <p className="text-light-muted dark:text-dark-text-muted mb-4 text-sm md:text-base">
@@ -561,7 +561,7 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
                 {selectedPosition ? `Join as ${selectedPosition}` : 
                  jobType === 'position' ? 'Join Our Collaborative Team' : 'Submit Your Resume'}
               </h2>
-              <p className="text-purple-100 dark:text-molten-gold text-sm md:text-base">
+              <p className="text-purple-100 dark:text-gray-300 text-sm md:text-base">
                 {jobType === 'position' 
                   ? 'Start your collaboration journey with Binary Beats'
                   : 'Send us your resume for future collaboration opportunities'
@@ -606,8 +606,8 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
 
         <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
           <div className="bg-light-surface dark:bg-dark-card rounded-2xl p-4 md:p-6">
-            <h3 className="text-base md:text-lg font-medium text-light-text dark:text-molten-gold mb-3 md:mb-4 flex items-center">
-              <User className="w-4 h-4 md:w-5 h-5 mr-2 text-light-crystal-purple dark:text-molten-gold" />
+            <h3 className="text-base md:text-lg font-medium text-light-text dark:text-gray-300 mb-3 md:mb-4 flex items-center">
+              <User className="w-4 h-4 md:w-5 h-5 mr-2 text-light-crystal-purple dark:text-gray-300" />
               Personal Information
             </h3>
             
@@ -697,8 +697,8 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
 
           {/* Professional Information */}
           <div className="bg-light-surface dark:bg-dark-card rounded-2xl p-4 md:p-6">
-            <h3 className="text-base md:text-lg font-medium text-light-text dark:text-molten-gold mb-3 md:mb-4 flex items-center">
-              <Briefcase className="w-4 h-4 md:w-5 h-5 mr-2 text-light-crystal-purple dark:text-molten-gold" />
+            <h3 className="text-base md:text-lg font-medium text-light-text dark:text-gray-300 mb-3 md:mb-4 flex items-center">
+              <Briefcase className="w-4 h-4 md:w-5 h-5 mr-2 text-light-crystal-purple dark:text-gray-300" />
               Collaboration Details
             </h3>
             
@@ -807,8 +807,8 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
 
           {/* Resume Upload */}
           <div className="bg-light-surface dark:bg-dark-card rounded-2xl p-4 md:p-6">
-            <h3 className="text-base md:text-lg font-medium text-light-text dark:text-molten-gold mb-3 md:mb-4 flex items-center">
-              <FileText className="w-4 h-4 md:w-5 h-5 mr-2 text-light-crystal-purple dark:text-molten-gold" />
+            <h3 className="text-base md:text-lg font-medium text-light-text dark:text-gray-300 mb-3 md:mb-4 flex items-center">
+              <FileText className="w-4 h-4 md:w-5 h-5 mr-2 text-light-crystal-purple dark:text-gray-300" />
               Resume Upload *
             </h3>
             
@@ -825,7 +825,7 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
             >
               {formData.resume ? (
                 <div className="flex items-center justify-center space-x-3">
-                  <FileText className="w-6 h-6 md:w-8 h-8 text-light-crystal-purple dark:text-molten-gold" />
+                  <FileText className="w-6 h-6 md:w-8 h-8 text-light-crystal-purple dark:text-gray-300" />
                   <div>
                     <p className="text-light-text dark:text-dark-text font-medium text-sm md:text-base">{formData.resume.name}</p>
                     <p className="text-light-muted dark:text-dark-text-muted text-xs md:text-sm">
@@ -844,7 +844,7 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
                   <Upload className="w-8 h-8 md:w-12 h-12 text-gray-400 dark:text-smoke-gray mx-auto mb-3 md:mb-4" />
                   <p className="text-light-muted dark:text-dark-text-muted mb-2 text-sm md:text-base">
                     Drag and drop your resume here, or{' '}
-                    <label className="text-light-crystal-purple hover:text-light-crystal-blue dark:text-inferno-orange dark:hover:text-molten-gold cursor-pointer">
+                    <label className="text-light-crystal-purple hover:text-light-crystal-blue dark:text-inferno-orange dark:hover:text-gray-300 cursor-pointer">
                       browse files
                       <input
                         type="file"
@@ -862,7 +862,7 @@ const JobApplicationModal: React.FC<JobApplicationModalProps> = ({ isOpen, onClo
 
           {/* Cover Letter */}
           <div className="bg-light-surface dark:bg-dark-card rounded-2xl p-4 md:p-6">
-            <h3 className="text-base md:text-lg font-medium text-light-text dark:text-molten-gold mb-3 md:mb-4">
+            <h3 className="text-base md:text-lg font-medium text-light-text dark:text-gray-300 mb-3 md:mb-4">
               Why Join Binary Beats? / Additional Information
             </h3>
             

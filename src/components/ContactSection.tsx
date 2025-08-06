@@ -189,7 +189,7 @@ const ContactSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-light text-light-text dark:text-molten-gold mb-4 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-light text-light-text dark:text-gray-300 mb-4 leading-tight"
             style={{
               fontFamily: 'Inter, sans-serif',
               letterSpacing: '-0.02em'
@@ -221,9 +221,9 @@ const ContactSection: React.FC = () => {
           >
             <div className="flex items-center space-x-3 mb-8">
               <div className="w-12 h-12 bg-light-crystal-blue/20 dark:bg-ember-red rounded-xl flex items-center justify-center">
-                <MessageCircle className="w-6 h-6 text-light-crystal-purple dark:text-molten-gold" />
+                <MessageCircle className="w-6 h-6 text-light-crystal-purple dark:text-gray-300" />
               </div>
-              <h3 className="text-2xl font-medium text-light-text dark:text-molten-gold">Start Your Journey</h3>
+              <h3 className="text-2xl font-medium text-light-text dark:text-gray-300">Start Your Journey</h3>
             </div>
 
             {submitStatus.isSuccess && (
@@ -369,7 +369,7 @@ const ContactSection: React.FC = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-medium text-light-text dark:text-molten-gold mb-8">Get in Touch</h3>
+              <h3 className="text-2xl font-medium text-light-text dark:text-gray-300 mb-8">Get in Touch</h3>
               <p className="text-light-muted dark:text-dark-text-muted font-light mb-8 leading-relaxed">
                 I'm always excited to discuss new projects and opportunities.
                 Whether you have a specific idea in mind or just want to explore
@@ -386,13 +386,13 @@ const ContactSection: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   whileHover={{ scale: 1.02 }}
-                  className="flex items-center p-6 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-light-crystal-blue dark:hover:border-inferno-orange hover:shadow-light-shadow-lg dark:hover:shadow-ember-glow transition-all duration-300"
+                  className="flex items-center p-6 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-light-crystal-blue dark:hover:border-gray-700 hover:shadow-light-shadow-lg dark:hover:shadow-ember-glow transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-light-crystal-blue/20 dark:bg-ember-red rounded-xl flex items-center justify-center text-light-crystal-purple dark:text-molten-gold mr-4">
+                  <div className="w-12 h-12 bg-light-crystal-blue/20 dark:bg-ember-red rounded-xl flex items-center justify-center text-light-crystal-purple dark:text-gray-300 mr-4">
                     {info.icon}
                   </div>
                   <div>
-                    <h4 className="font-medium text-light-text dark:text-molten-gold">{info.title}</h4>
+                    <h4 className="font-medium text-light-text dark:text-gray-300">{info.title}</h4>
                     <p className="text-light-muted dark:text-dark-text-muted font-light">{info.value}</p>
                   </div>
                 </motion.a>
@@ -405,7 +405,7 @@ const ContactSection: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-smoke-gray/50 dark:to-ashen-charcoal/50 rounded-2xl border border-light-crystal-blue/50 dark:border-smoke-gray"
             >
-              <h4 className="font-medium text-light-text dark:text-molten-gold mb-2">Quick Response Guarantee</h4>
+              <h4 className="font-medium text-light-text dark:text-gray-300 mb-2">Quick Response Guarantee</h4>
               <p className="text-light-muted dark:text-dark-text-muted text-sm font-light">
                 I typically respond to all inquiries within 24 hours. For urgent projects,
                 feel free to call directly for immediate assistance.
@@ -413,7 +413,7 @@ const ContactSection: React.FC = () => {
             </motion.div>
 
             <div className="pt-8">
-              <h4 className="text-lg font-medium text-light-text dark:text-molten-gold mb-4">Connect with me</h4>
+              <h4 className="text-lg font-medium text-light-text dark:text-gray-300 mb-4">Connect with me</h4>
               <div className="grid grid-cols-3 gap-3">
                 {socialLinks.map((social) => (
                   <motion.a
@@ -435,7 +435,7 @@ const ContactSection: React.FC = () => {
                   <div className="text-xs text-light-muted dark:text-dark-text-muted font-light">Followers</div>
                 </div>
                 <div className="text-center p-4 bg-light-surface dark:bg-dark-card backdrop-blur-sm rounded-xl border border-gray-200/50 dark:border-smoke-gray/50">
-                  <div className="text-2xl font-light text-light-crystal-blue dark:text-molten-gold mb-1">{profileVisits.toLocaleString()}</div>
+                  <div className="text-2xl font-light text-light-crystal-blue dark:text-gray-300 mb-1">{profileVisits.toLocaleString()}</div>
                   <div className="text-xs text-light-muted dark:text-dark-text-muted font-light">Profile Visits</div>
                 </div>
               </div>

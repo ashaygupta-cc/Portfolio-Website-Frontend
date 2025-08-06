@@ -29,11 +29,11 @@ const HeroSection: React.FC = () => {
         {/* Dark mode: fire particles (only visible in dark mode) */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-inferno-orange rounded-full opacity-20 animate-flame-dance blur-xl hidden dark:block" />
         <div className="absolute top-40 right-20 w-24 h-24 bg-crimson-blaze rounded-full opacity-30 animate-ember-rise blur-lg hidden dark:block" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-molten-gold rounded-full opacity-25 animate-flame-dance blur-md hidden dark:block" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-gray-500 rounded-full opacity-25 animate-flame-dance blur-md hidden dark:block" style={{ animationDelay: '2s' }} />
         <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-ember-red rounded-full opacity:20 animate-ember-rise blur-lg hidden dark:block" style={{ animationDelay: '0.5s' }} />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
 
           <motion.div
@@ -48,7 +48,7 @@ const HeroSection: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="space-y-2"
             >
-              <p className="text-lg text-light-text dark:text-molten-gold font-medium animate-fire-flicker">Hello, I'm</p>
+              <p className="text-lg text-light-text dark:text-gray-300 font-medium ">Hello, I'm</p>
               <h1
                 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight animate-flame-dance"
                 style={{
@@ -107,8 +107,8 @@ const HeroSection: React.FC = () => {
                 className={`
                   flex items-center justify-center space-x-2 px-8 py-4 border-2
                   ${isDark ? 'border-smoke-gray' : 'border-gray-300'}
-                  ${isDark ? 'text-molten-gold' : 'text-gray-600'}
-                  font-medium rounded-full transition-all duration-300
+                  ${isDark ? 'text-gray-300' : 'text-gray-600'}
+                  font-medium rounded-full transition-all duration-0
                   hover:bg-gray-50 dark:hover:bg-ashen-charcoal
                 `}
               >
@@ -121,7 +121,7 @@ const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.3 }}
-              className="grid grid-cols-3 gap-8 pt-8"
+              className="grid grid-cols-3 gap-8"
             >
               <div className="text-center">
                 <div className="text-2xl font-light text-purple-600 dark:text-inferno-orange mb-1 animate-fire-flicker">1+</div>
@@ -132,7 +132,7 @@ const HeroSection: React.FC = () => {
                 <div className="text-sm text-light-muted dark:text-dark-text-muted font-light">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-light text-purple-600  dark:text-molten-gold mb-1 animate-fire-flicker">90%+</div>
+                <div className="text-2xl font-light text-purple-600  dark:text-gray-300 mb-1 animate-fire-flicker">90%+</div>
                 <div className="text-sm text-light-muted dark:text-dark-text-muted font-light">Client Satisfaction</div>
               </div>
             </motion.div>
@@ -151,12 +151,12 @@ const HeroSection: React.FC = () => {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center space-y-2 text-light-text dark:text-molten-gold"
+          className="flex flex-col items-center space-y-2 text-light-text dark:text-gray-300"
         >
           <span className="text-sm tracking-wider font-light animate-fire-flicker">
             SCROLL
           </span>
-          <svg className="w-5 h-5 text-light-text dark:text-molten-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-light-text dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </motion.div>

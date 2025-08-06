@@ -21,7 +21,7 @@ const AboutSection: React.FC = () => {
         {/* Dark mode: fire particles (only visible in dark mode) */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-inferno-orange rounded-full opacity-10 animate-flame-dance blur-xl hidden dark:block" />
         <div className="absolute top-40 right-20 w-24 h-24 bg-crimson-blaze rounded-full opacity-15 animate-ember-rise blur-lg hidden dark:block" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-molten-gold rounded-full opacity-12 animate-flame-dance blur-md hidden dark:block" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-gray-500 rounded-full opacity-12 animate-flame-dance blur-md hidden dark:block" style={{ animationDelay: '2s' }} />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -36,7 +36,7 @@ const AboutSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             // Adjusted text color for theme
-            className="text-4xl md:text-5xl lg:text-6xl font-light text-light-text dark:text-molten-gold mb-4 leading-tight animate-fire-flicker"
+            className="text-4xl md:text-5xl lg:text-6xl font-light text-light-text dark:text-gray-300 mb-4 leading-tight animate-fire-flicker"
             style={{
               fontFamily: "Inter, sans-serif",
               letterSpacing: "-0.02em",
@@ -98,9 +98,9 @@ const AboutSection: React.FC = () => {
             className="space-y-6"
           >
             <p className="text-lg text-light-muted dark:text-dark-text-muted leading-relaxed font-light">
-              I'm <span className="font-medium text-light-text dark:text-molten-gold">Ashay Gupta</span>
+              I'm <span className="font-medium text-light-text dark:text-gray-300">Ashay Gupta</span>
               , a full-stack developer currently in my second year of college.
-              My journey began with competitive programming : I'm a 3⭐️
+              My journey began with competitive programming : I'm a 3☆
               CodeChef coder with 600+ problems solved using C++, along with
               experience in Python and C.
             </p>
@@ -127,11 +127,11 @@ const AboutSection: React.FC = () => {
                 "Node.js",
                 "Python",
                 "TypeScript",
-                "AWS",
+                "C++"
               ].map((tech) => (
                 <span
                   key={tech}
-                  className="px-4 py-2 bg-gradient-to-r from-light-crystal-purple to-light-crystal-blue text-white dark:bg-gradient-ember dark:text-lava-black rounded-full text-sm font-medium shadow-light-shadow-md dark:shadow-molten-glow"
+                  className="px-4 py-2 bg-gradient-to-r from-light-crystal-purple to-light-crystal-blue text-white dark:bg-gradient-ember dark:text-gray-300 rounded-full text-sm font-medium  "
                 >
                   {tech}
                 </span>

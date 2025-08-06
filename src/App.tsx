@@ -9,7 +9,7 @@ import JourneySection from './components/JourneySection';
 import ProjectsSection from './components/ProjectsSection';
 import CertificationsSection from './components/CertificationsSection';
 import ResumeSection from './components/ResumeSection';
-import TeamSection from './components/TeamSection';
+// import TeamSection from './components/TeamSection';
 import SocialLinksSection from './components/SocialLinksSection';
 import ContactSection from './components/ContactSection';
 import TechExpertiseSection from './components/TechExpertiseSection';
@@ -63,7 +63,7 @@ function App() {
           <ProjectsSection />
           <CertificationsSection />
           <ResumeSection />
-          <TeamSection />
+          {/* <TeamSection /> */}
           <SocialLinksSection />
           <ContactSection />
         </main>

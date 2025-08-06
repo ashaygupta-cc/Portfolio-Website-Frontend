@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDown, ChevronUp, Github } from 'lucide-react';
+import React, { useState } from 'react';
+import { useTheme } from "../contexts/ThemeContext";
 import ProjectCard from './ProjectCard';
-import GitViz from '/GitViz.png'
-import { useTheme } from "../contexts/ThemeContext"; 
-import PortfolioLight from '/Portfolio Light.png'
-import PortfolioDark from '/Portfolio Dark.png'
+import GitViz from '/GitViz.png';
+import PortfolioDark from '/Portfolio Dark.png';
+import PortfolioLight from '/Portfolio Light.png';
 
 
 const ProjectsSection: React.FC = () => {
@@ -94,7 +94,7 @@ const ProjectsSection: React.FC = () => {
         {/* Dark mode: fire particles (only visible in dark mode) */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-inferno-orange rounded-full opacity-10 animate-flame-dance blur-xl hidden dark:block" />
         <div className="absolute top-40 right-20 w-24 h-24 bg-crimson-blaze rounded-full opacity-15 animate-ember-rise blur-lg hidden dark:block" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-molten-gold rounded-full opacity-12 animate-flame-dance blur-md hidden dark:block" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-gray-500 rounded-full opacity-12 animate-flame-dance blur-md hidden dark:block" style={{ animationDelay: '2s' }} />
         <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-ember-red rounded-full opacity-20 animate-ember-rise blur-lg hidden dark:block" style={{ animationDelay: '0.5s' }} />
       </div>
 
@@ -109,7 +109,7 @@ const ProjectsSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-light text-light-text dark:text-molten-gold mb-4 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-light text-light-text dark:text-gray-300 mb-4 leading-tight"
             style={{ 
               fontFamily: 'Inter, sans-serif',
               letterSpacing: '-0.02em'
@@ -132,13 +132,15 @@ const ProjectsSection: React.FC = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
-          <AnimatePresence>
-            {displayedProjects.map((project, index) => (
-              <ProjectCard key={project.title} {...project} index={index} />
-            ))}
-          </AnimatePresence>
-        </div>
+     <div className="flex flex-wrap justify-center gap-10 mb-16">
+  <AnimatePresence>
+    {displayedProjects.map((project, index) => (
+      <div key={project.title} className="w-full md:w-[45%] lg:w-[30%] ">
+        <ProjectCard {...project} index={index} />
+      </div>
+    ))}
+  </AnimatePresence>
+</div>
 
         {projects.length > initialProjectCount && (
           <motion.div

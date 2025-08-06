@@ -54,14 +54,7 @@ const ResumeSection: React.FC = () => {
         "Completed secondary and high school education at St. Aloysius with consistent top performance in both academics and sports. Maintained a well-rounded profile through active participation in competitions and school activities.",
       achievements: [
         "12× Academic Rank 1",
-        "6× Inter-College Sprint Winner (100m & 200m)",
-        "3× 400m Sprint Winner",
-        "2× Inter-House Kabaddi Champion (1× MVP)",
-        "2× Kho-Kho Championship Winner",
-        "1× Chess Championship Winner",
-        "2× Team Quiz Competition (Talent Cocktail) Winner",
-        "1× Interschool Debate Winner",
-        "4× Full Attendance Award",
+        "25+ Competitions Won",
       ],
     },
   ];
@@ -110,7 +103,7 @@ const ResumeSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-light text-light-text dark:text-molten-gold mb-4 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-light text-light-text dark:text-gray-300 mb-4 leading-tight"
             style={{
               fontFamily: "Inter, sans-serif",
               letterSpacing: "-0.02em",
@@ -141,7 +134,7 @@ const ResumeSection: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-2xl font-medium text-light-text dark:text-molten-gold mb-6">
+            <h3 className="text-2xl font-medium text-light-text dark:text-gray-300 mb-6">
               Experience
             </h3>
 
@@ -152,9 +145,9 @@ const ResumeSection: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="p-6 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-light-crystal-blue dark:hover:border-inferno-orange transition-all duration-300"
+                  className="p-6 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-light-crystal-blue dark:hover:border-gray-700 transition-all duration-300"
                 >
-                  <h4 className="text-xl font-medium text-light-text dark:text-molten-gold mb-1">
+                  <h4 className="text-xl font-medium text-light-text dark:text-gray-300 mb-1">
                     {exp.title}
                   </h4>
                   <p className="text-light-crystal-purple dark:text-crimson-blaze font-medium text-sm mb-2">
@@ -196,7 +189,7 @@ const ResumeSection: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="mb-12"
             >
-              <h3 className="text-2xl font-medium text-light-text dark:text-molten-gold mb-6">
+              <h3 className="text-2xl font-medium text-light-text dark:text-gray-300 mb-6">
                 Education
               </h3>
 
@@ -207,9 +200,9 @@ const ResumeSection: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="p-6 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-light-crystal-blue dark:hover:border-inferno-orange transition-all duration-300"
+                    className="p-6 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-light-crystal-blue dark:hover:border-gray-700 transition-all duration-300"
                   >
-                    <h4 className="text-xl font-medium text-light-text dark:text-molten-gold mb-1">
+                    <h4 className="text-xl font-medium text-light-text dark:text-gray-300 mb-1">
                       {edu.degree}
                     </h4>
                     <p className="text-light-crystal-purple dark:text-crimson-blaze font-medium text-sm mb-2">
@@ -251,7 +244,7 @@ const ResumeSection: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h3 className="text-2xl font-medium text-light-text dark:text-molten-gold mb-6">
+              <h3 className="text-2xl font-medium text-light-text dark:text-gray-300 mb-6">
                 Certifications
               </h3>
 
@@ -262,7 +255,7 @@ const ResumeSection: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="p-4 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-xl hover:border-light-crystal-blue dark:hover:border-inferno-orange transition-all duration-300"
+                    className="p-4 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-xl hover:border-light-crystal-blue dark:hover:border-gray-700 transition-all duration-300"
                   >
                     <p className="text-light-muted dark:text-dark-text-muted font-medium text-sm">
                       {cert}
@@ -282,10 +275,10 @@ const ResumeSection: React.FC = () => {
         >
           <div className="bg-gradient-to-br from-light-crystal-blue/10 to-light-crystal-purple/10 dark:from-smoke-gray/50 dark:to-ashen-charcoal/50 border border-light-crystal-blue/50 dark:border-smoke-gray rounded-3xl p-12 max-w-4xl mx-auto">
             <div className="w-16 h-16 bg-light-crystal-blue/20 dark:bg-ember-red rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Award className="w-8 h-8 text-light-crystal-purple dark:text-molten-gold" />
+              <Award className="w-8 h-8 text-light-crystal-purple dark:text-gray-300" />
             </div>
 
-            <h3 className="text-3xl font-light text-light-text dark:text-molten-gold mb-4">
+            <h3 className="text-3xl font-light text-light-text dark:text-gray-300 mb-4">
               Download My Full Resume
             </h3>
             <p className="text-light-muted dark:text-dark-text-muted mb-8 font-light max-w-2xl mx-auto leading-relaxed">
