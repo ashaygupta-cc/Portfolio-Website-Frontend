@@ -16,7 +16,6 @@ const Navigation: React.FC = () => {
     { id: 'projects', label: 'PROJECTS' },
     { id: 'certifications', label: 'CERTS' },
     { id: 'resume', label: 'RESUME' },
-    // { id: 'team', label: 'TEAM' },
     { id: 'social', label: 'SOCIAL' },
     { id: 'contact', label: 'CONTACT' }
   ];

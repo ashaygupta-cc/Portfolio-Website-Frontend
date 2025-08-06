@@ -258,7 +258,7 @@ const CertificationsSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center"
         >
-          <div className="bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl p-8 max-w-3xl mx-auto">
+          <div className="bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl p-4 max-w-sm md:max-w-xl lg:max-w-2xl mx-auto">
             <div className="w-16 h-16 bg-light-crystal-blue/20 dark:bg-ember-red rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Award className="w-8 h-8 text-light-crystal-purple dark:text-gray-300" />
             </div>
@@ -267,9 +267,7 @@ const CertificationsSection: React.FC = () => {
               Continuous Learning Journey
             </h3>
             <p className="text-light-muted dark:text-dark-text-muted mb-6 font-light leading-relaxed">
-              I believe in staying current with the latest technologies and
-              industry best practices. These certifications represent my
-              commitment to professional excellence and continuous improvement.
+              My certifications reflect a commitment to continuous learning and professional growth in the latest technologies.
             </p>
 
             {certifications.length > initialCertCount && (

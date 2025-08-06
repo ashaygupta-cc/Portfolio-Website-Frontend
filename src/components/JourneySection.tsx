@@ -16,27 +16,41 @@ import JEE from "/JEE.jpg";
 
 const JourneySection: React.FC = () => {
   const [carouselDuration, setCarouselDuration] = useState(28);
+  const [isMobile, setIsMobile] = useState(false); // New state for mobile detection
+  const [flippedCards, setFlippedCards] = useState<{ [key: number]: boolean }>({}); 
   const carouselControls = useAnimation();
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setCarouselDuration(15);
-      } else {
-        setCarouselDuration(15);
-      }
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      setCarouselDuration(mobile ? 10 : 15);
     };
 
     handleResize();
-
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
     carouselControls.start("running");
   }, [carouselDuration, carouselControls]);
+
+  const handleCardClick = (id: number) => {
+    if (isMobile) {
+      setFlippedCards((prev) => {
+        const newState = { ...prev, [id]: !prev[id] };
+        const anyCardFlipped = Object.values(newState).some(Boolean);
+
+        if (anyCardFlipped) {
+          carouselControls.start("paused");
+        } else {
+          carouselControls.start("running");
+        }
+        return newState;
+      });
+    }
+  };
 
   const journeySteps = [
     {
@@ -217,17 +231,21 @@ const JourneySection: React.FC = () => {
               <motion.div
                 key={index}
                 className="flex-shrink-0 w-72 md:w-96 h-[450px]"
-                onHoverStart={() => carouselControls.start("paused")}
-                onHoverEnd={() => carouselControls.start("running")}
+                onHoverStart={!isMobile ? () => carouselControls.start("paused") : undefined}
+                onHoverEnd={!isMobile ? () => carouselControls.start("running") : undefined}
               >
                 <motion.div
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ y: -8, transition: { duration: 0.3 } }}
+                  whileHover={!isMobile ? { y: -8, transition: { duration: 0.3 } } : undefined}
                   className="group relative h-full w-full [perspective:1000px] hover:cursor-pointer"
+                  onClick={isMobile ? () => handleCardClick(step.id) : undefined}
                 >
-                  <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                  <div
+                    className={`relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] ${!isMobile ? 'group-hover:[transform:rotateY(180deg)]' : ''}`}
+                    style={isMobile ? { transform: flippedCards[step.id] ? "rotateY(180deg)" : "rotateY(0deg)" } : {}}
+                  >
                     <div className="absolute inset-0 [backface-visibility:hidden] bg-light-surface/80 dark:bg-dark-card/80 backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl hover:border-light-crystal-blue dark:hover:border-inferno-orange shadow-md shadow-red-500/20 dark:shadow-fire-glow-sm hover:shadow-lg hover:shadow-red-500/40 dark:hover:shadow-fire-glow transition-all duration-500 h-full p-6 md:p-8">
                       <div className="flex justify-between items-start mb-4">
                         <div className="flex items-center">

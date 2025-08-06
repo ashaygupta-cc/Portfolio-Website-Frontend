@@ -9,7 +9,6 @@ import JourneySection from './components/JourneySection';
 import ProjectsSection from './components/ProjectsSection';
 import CertificationsSection from './components/CertificationsSection';
 import ResumeSection from './components/ResumeSection';
-// import TeamSection from './components/TeamSection';
 import SocialLinksSection from './components/SocialLinksSection';
 import ContactSection from './components/ContactSection';
 import TechExpertiseSection from './components/TechExpertiseSection';
@@ -49,7 +48,6 @@ function App() {
 
   return (
     <ThemeProvider>
-      {/* Updated to use gradient-light-main for light mode and gradient-dark-main for dark mode */}
       <div className="relative min-h-screen bg-gradient-light-main dark:bg-gradient-dark-main overflow-x-hidden transition-colors duration-300">
         {/* Navigation */}
         <Navigation />

@@ -168,7 +168,7 @@ const ResumeSection: React.FC = () => {
                     </p>
                     {exp.achievements.map((achievement, i) => (
                       <div key={i} className="flex items-start">
-                        <div className="w-1.5 h-1.5 bg-light-crystal-blue dark:bg-inferno-orange rounded-full mt-2 mr-3 flex-shrink-0" />
+                        <div className="w-1.5 h-1.5 bg-light-crystal-blue dark:bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0" />
                         <p className="text-light-muted dark:text-dark-text-muted text-sm font-light">
                           {achievement}
                         </p>
@@ -226,7 +226,7 @@ const ResumeSection: React.FC = () => {
                       </p>
                       {edu.achievements.map((achievement, i) => (
                         <div key={i} className="flex items-start">
-                          <div className="w-1.5 h-1.5 bg-light-crystal-blue dark:bg-inferno-orange rounded-full mt-2 mr-3 flex-shrink-0" />
+                          <div className="w-1.5 h-1.5 bg-light-crystal-blue dark:bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0" />
                           <p className="text-light-muted dark:text-dark-text-muted text-sm font-light">
                             {achievement}
                           </p>

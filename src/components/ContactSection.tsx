@@ -386,7 +386,7 @@ const ContactSection: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   whileHover={{ scale: 1.02 }}
-                  className="flex items-center p-6 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-light-crystal-blue dark:hover:border-gray-700 hover:shadow-light-shadow-lg dark:hover:shadow-ember-glow transition-all duration-300"
+                  className="flex items-center p-6 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-light-crystal-blue dark:hover:border-gray-700 hover:shadow-light-shadow-lg dark:hover:shadow-gray-600 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-light-crystal-blue/20 dark:bg-ember-red rounded-xl flex items-center justify-center text-light-crystal-purple dark:text-gray-300 mr-4">
                     {info.icon}

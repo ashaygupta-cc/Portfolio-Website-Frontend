@@ -179,7 +179,7 @@ const TechExpertiseSection: React.FC = () => {
       },
       {
         name: "PostgreSQL",
-        icon: "🐘",
+        icon: "�",
         percentage: 90,
         barGradient: "from-purple-400 to-pink-400",
       },
@@ -303,9 +303,7 @@ const TechExpertiseSection: React.FC = () => {
       id="expertise"
       className="relative min-h-screen py-20 bg-gradient-light-main dark:bg-gradient-dark-main overflow-hidden will-change-transform md:py-20 sm:py-16 xs:py-12"
     >
-      {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Light mode: subtle, peaceful elements */}
         <div className="absolute top-1/4 left-10 w-64 h-64 bg-light-crystal-blue rounded-full opacity-10 animate-float dark:hidden" />
         <div
           className="absolute bottom-1/4 right-10 w-48 h-48 bg-light-crystal-purple rounded-full opacity-15 animate-float dark:hidden"
@@ -313,7 +311,6 @@ const TechExpertiseSection: React.FC = () => {
         />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-light-crystal-blue/10 to-light-crystal-purple/10 rounded-full opacity-20 animate-pulse dark:hidden" />
 
-        {/* Dark mode: fire particles (only visible in dark mode) */}
         <div className="absolute top-1/4 left-10 w-64 h-64 bg-gray-500 rounded-full opacity-10 animate-float hidden dark:block" />
         <div
           className="absolute bottom-1/4 right-10 w-48 h-48 bg-crimson-blaze rounded-full opacity-15 animate-float hidden dark:block"
@@ -366,7 +363,7 @@ const TechExpertiseSection: React.FC = () => {
               exit={{ opacity: 0, y: -50 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="flex flex-wrap gap-8 mb-16">
+              <div className="flex flex-wrap justify-center gap-8 mb-16">
                 {skills.map((skill, index) => (
                   <motion.div
                     key={index}
@@ -374,7 +371,7 @@ const TechExpertiseSection: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                    className="w-full lg:w-[calc(33.333333%-20px)] bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl p-4 sm:p-6 text-center shadow-light-shadow-lg dark:shadow-lg hover:shadow-light-shadow-xl dark:hover:shadow-2xl hover:border-light-crystal-blue dark:hover:border-gray-600 transition-all duration-500 group"
+                    className="w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.3333%-21.3333px)] bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl p-4 sm:p-6 text-center shadow-light-shadow-lg dark:shadow-lg hover:shadow-light-shadow-xl dark:hover:shadow-2xl hover:border-light-crystal-blue dark:hover:border-gray-600 transition-all duration-500 group"
                   >
                     <div className="w-16 h-16 bg-light-crystal-blue/20 dark:bg-ember-red rounded-2xl flex items-center justify-center mx-auto mb-4 text-light-crystal-purple dark:text-gray-300">
                       {skill.icon}
@@ -449,7 +446,7 @@ const TechExpertiseSection: React.FC = () => {
                       className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                         activeCategory === category
                           ? "bg-gradient-to-r from-light-crystal-purple to-light-crystal-blue text-white dark:bg-gradient-inferno shadow-light-shadow-md dark:shadow-fire-glow"
-                          : "bg-light-surface dark:bg-ashen-charcoal text-light-muted dark:text-dark-text-muted  hover:bg-gray-100 dark:hover:bg-smoke-gray"
+                          : "bg-light-surface dark:bg-ashen-charcoal text-light-muted dark:text-dark-text-muted  hover:bg-gray-100 dark:hover:bg-smoke-gray"
                       }`}
                     >
                       {category === "softSkills"
