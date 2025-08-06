@@ -133,7 +133,7 @@ const FinalGsap: React.FC = () => {
           args={[tetrahedronGeometry, undefined, count1]}
         >
           <meshStandardMaterial
-            color="#a30000" 
+            color="#E43636" 
             emissive="#5a0000" 
             emissiveIntensity={0.25} 
             metalness={0.6}
