@@ -118,7 +118,7 @@ const ContactSection: React.FC = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
-      value: 'Kanpur,Uttar Pradesh,India',
+      value: 'Kanpur, Uttar Pradesh, India',
       link: 'https://maps.app.goo.gl/Gb6eq6uGsXa3riz17'
     }
   ];
