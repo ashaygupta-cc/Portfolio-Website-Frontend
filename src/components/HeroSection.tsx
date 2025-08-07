@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Download, Mail } from "lucide-react";
 import Scene3D from "./Scene3D";
@@ -6,6 +6,16 @@ import { useTheme } from "../contexts/ThemeContext";
 
 const HeroSection: React.FC = () => {
   const { isDark } = useTheme();
+
+  useEffect(() => {
+    const setVh = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+    setVh();
+    window.addEventListener("resize", setVh);
+    return () => window.removeEventListener("resize", setVh);
+  }, []);
 
   const highlightColor = isDark ? "#FF4500" : "#6366f1";
   const shadows = isDark
@@ -20,7 +30,7 @@ const HeroSection: React.FC = () => {
       <Scene3D />
 
       <div className="absolute inset-0 overflow-hidden">
-        {/* Light mode: subtle, peaceful elements (hidden in dark mode) */}
+        {/* Floating particles for light mode */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-light-crystal-blue rounded-full opacity-30 animate-float blur-xl dark:hidden" />
         <div
           className="absolute top-40 right-20 w-24 h-24 bg-light-crystal-purple rounded-full opacity-25 animate-float blur-lg dark:hidden"
@@ -35,7 +45,7 @@ const HeroSection: React.FC = () => {
           style={{ animationDelay: "0.5s" }}
         />
 
-        {/* Dark mode: fire particles (only visible in dark mode) */}
+        {/* Particles for dark mode */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-inferno-orange rounded-full opacity-20 animate-flame-dance blur-xl hidden dark:block" />
         <div
           className="absolute top-40 right-20 w-24 h-24 bg-crimson-blaze rounded-full opacity-30 animate-ember-rise blur-lg hidden dark:block"
@@ -46,13 +56,13 @@ const HeroSection: React.FC = () => {
           style={{ animationDelay: "2s" }}
         />
         <div
-          className="absolute bottom-20 right-1/3 w-28 h-28 bg-ember-red rounded-full opacity:20 animate-ember-rise blur-lg hidden dark:block"
+          className="absolute bottom-20 right-1/3 w-28 h-28 bg-ember-red rounded-full opacity-20 animate-ember-rise blur-lg hidden dark:block"
           style={{ animationDelay: "0.5s" }}
         />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 min-h-[calc(var(--vh,1vh)*100)]">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -65,7 +75,7 @@ const HeroSection: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="space-y-2"
             >
-              <p className="text-lg text-light-text dark:text-gray-300 font-medium ">
+              <p className="text-lg text-light-text dark:text-gray-300 font-medium">
                 Hello, I'm
               </p>
               <h1
@@ -82,6 +92,7 @@ const HeroSection: React.FC = () => {
               </h1>
             </motion.div>
 
+            {/* Subtitle */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -93,22 +104,19 @@ const HeroSection: React.FC = () => {
               solutions that transform ideas into reality.
             </motion.p>
 
+            {/* Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.1 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              {/* DOWNLOAD RESUME Button */}
               <motion.a
                 href="/AshayGupta_Resume.pdf"
                 download="AshayGupta_Resume.pdf"
-                whileHover={{
-                  scale: 1.02,
-                  boxShadow: shadows,
-                }}
+                whileHover={{ scale: 1.02, boxShadow: shadows }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center justify-center space-x-2 px-8 py-4 bg-gradient-to-r from-[#3a9fff] to-[#9a5fff] text-white font-medium rounded-full transition-all duration-300 hover:bg-light-crystal-blue  dark:bg-gradient-inferno dark:hover:shadow-fire-glow"
+                className="flex items-center justify-center space-x-2 px-8 py-4 bg-gradient-to-r from-[#3a9fff] to-[#9a5fff] text-white font-medium rounded-full transition-all duration-300 hover:bg-light-crystal-blue dark:bg-gradient-inferno dark:hover:shadow-fire-glow"
               >
                 <Download className="w-5 h-5" />
                 <span>DOWNLOAD RESUME</span>
@@ -121,22 +129,21 @@ const HeroSection: React.FC = () => {
                   scale: 1.02,
                   borderColor: highlightColor,
                   color: highlightColor,
-                  boxShadow: isDark ? "0 0 20px rgba(255, 69, 0, 0.3)" : "",
+                  boxShadow: isDark
+                    ? "0 0 20px rgba(255, 69, 0, 0.3)"
+                    : "",
                 }}
                 whileTap={{ scale: 0.98 }}
-                className={`
-                  flex items-center justify-center space-x-2 px-8 py-4 border-2
-                  ${isDark ? "border-smoke-gray" : "border-gray-300"}
-                  ${isDark ? "text-gray-300" : "text-gray-600"}
-                  font-medium rounded-full transition-all duration-0
-                  hover:bg-gray-50 dark:hover:bg-ashen-charcoal
-                `}
+                className={`flex items-center justify-center space-x-2 px-8 py-4 border-2 ${
+                  isDark ? "border-smoke-gray text-gray-300" : "border-gray-300 text-gray-600"
+                } font-medium rounded-full transition-all duration-0 hover:bg-gray-50 dark:hover:bg-ashen-charcoal`}
               >
                 <Mail className="w-5 h-5" />
                 <span>GET IN TOUCH</span>
               </motion.a>
             </motion.div>
 
+            {/* Metrics */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -160,7 +167,7 @@ const HeroSection: React.FC = () => {
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-light text-purple-700  dark:text-gray-300 mb-1 animate-fire-flicker">
+                <div className="text-2xl font-light text-purple-700 dark:text-gray-300 mb-1 animate-fire-flicker">
                   90%+
                 </div>
                 <div className="text-sm text-light-muted dark:text-dark-text-muted font-light">
@@ -174,6 +181,7 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
+      {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -189,7 +197,7 @@ const HeroSection: React.FC = () => {
             SCROLL
           </span>
           <svg
-            className="w-5 h-5 text-light-text dark:text-gray-300"
+            className="w-5 h-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
