@@ -192,7 +192,7 @@ const ProjectsSection: React.FC = () => {
               boxShadow: '0 10px 40px rgba(139, 69, 19, 0.2)'
             }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center justify-center px-10 py-4 bg-light-crystal-purple text-white font-medium rounded-full transition-all duration-300 hover:bg-light-crystal-blue dark:bg-gradient-inferno dark:hover:shadow-fire-glow"
+            className="inline-flex items-center justify-center px-10 py-4 bg-purple-400 text-white font-medium rounded-full transition-all duration-300 hover:bg-blue-400 dark:bg-gradient-inferno dark:hover:shadow-fire-glow"
           >
             <Github className="w-5 h-5 mr-3" />
             VISIT MY GITHUB

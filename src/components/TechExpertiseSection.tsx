@@ -429,7 +429,7 @@ const TechExpertiseSection: React.FC = () => {
                   onClick={() => setActiveView("skills")}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="px-8 py-4 bg-light-crystal-purple text-white font-medium rounded-full transition-all duration-300 hover:bg-light-crystal-blue dark:bg-gradient-inferno dark:hover:shadow-fire-glow"
+                  className="px-8 py-4 bg-purple-400 text-white font-medium rounded-full transition-all duration-300 hover:bg-blue-400 dark:bg-gradient-inferno dark:hover:shadow-fire-glow"
                 >
                   VIEW DETAILED SKILLS
                 </motion.button>
