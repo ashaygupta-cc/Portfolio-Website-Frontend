@@ -159,7 +159,7 @@ const SocialLinksSection: React.FC = () => {
                   scale: 1.02,
                   transition: { duration: 0.3 },
                 }}
-                className={`group relative p-6 rounded-3xl border-2 border-gray-200/50 dark:border-smoke-gray/50 shadow-light-shadow-lg dark:shadow-lg hover:shadow-light-shadow-xl dark:hover:shadow-2xl hover:border-light-crystal-blue dark:hover:border-gray-700 transition-all duration-500 flex items-center space-x-4 ${platform.bgColor}`}
+                className={`group relative p-6 rounded-3xl border-2 border-gray-200/50 dark:border-smoke-gray/50 shadow-light-shadow-lg dark:shadow-lg hover:shadow-light-shadow-xl dark:hover:shadow-2xl hover:border-sky-300 dark:hover:border-gray-700 transition-all duration-500 flex items-center space-x-4 ${platform.bgColor}`}
               >
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${platform.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-3xl`}

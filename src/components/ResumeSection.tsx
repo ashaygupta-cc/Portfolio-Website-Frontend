@@ -145,7 +145,8 @@ const ResumeSection: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="p-6 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-light-crystal-blue dark:hover:border-gray-700 transition-all duration-300"
+                  className="p-6 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-sky-300 dark:hover:border-gray-700
+                  hover:shadow-[0_0_30px_rgba(135,206,235,0.6),_0_0_30px_rgba(221,160,221,0.6)] dark:hover:shadow-gray-600 transition-all duration-300"
                 >
                   <h4 className="text-xl font-medium text-light-text dark:text-gray-300 mb-1">
                     {exp.title}
@@ -168,7 +169,7 @@ const ResumeSection: React.FC = () => {
                     </p>
                     {exp.achievements.map((achievement, i) => (
                       <div key={i} className="flex items-start">
-                        <div className="w-1.5 h-1.5 bg-light-crystal-blue dark:bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0" />
+                        <div className="w-1.5 h-1.5 bg-gray-700 dark:bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0" />
                         <p className="text-light-muted dark:text-dark-text-muted text-sm font-light">
                           {achievement}
                         </p>
@@ -200,7 +201,8 @@ const ResumeSection: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="p-6 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-light-crystal-blue dark:hover:border-gray-700 transition-all duration-300"
+                    className="p-6 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-2xl hover:border-sky-300 dark:hover:border-gray-700
+                    hover:shadow-[0_0_30px_rgba(135,206,235,0.6),_0_0_30px_rgba(221,160,221,0.6)] dark:hover:shadow-gray-600 transition-all duration-300"
                   >
                     <h4 className="text-xl font-medium text-light-text dark:text-gray-300 mb-1">
                       {edu.degree}
@@ -220,13 +222,13 @@ const ResumeSection: React.FC = () => {
                       </p>
                     )}
                     { edu.achievements && (
-                    <div className="space-y-1">
+                    <div className="space-y-1 ">
                       <p className="text-sm font-medium text-light-muted dark:text-dark-text-muted mb-3">
                         Key Achievements:
                       </p>
                       {edu.achievements.map((achievement, i) => (
                         <div key={i} className="flex items-start">
-                          <div className="w-1.5 h-1.5 bg-light-crystal-blue dark:bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0" />
+                          <div className="w-1.5 h-1.5 bg-gray-700 dark:bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0" />
                           <p className="text-light-muted dark:text-dark-text-muted text-sm font-light">
                             {achievement}
                           </p>
@@ -255,7 +257,9 @@ const ResumeSection: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="p-4 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-xl hover:border-light-crystal-blue dark:hover:border-gray-700 transition-all duration-300"
+                    className="p-4 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-xl 
+                    hover:border-light-crystal-blue dark:hover:border-gray-700
+                    hover:shadow-light-shadow-lg dark:hover:shadow-gray-600 transition-all duration-300"
                   >
                     <p className="text-light-muted dark:text-dark-text-muted font-medium text-sm">
                       {cert}

@@ -246,7 +246,8 @@ const JourneySection: React.FC = () => {
                     className={`relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] ${!isMobile ? 'group-hover:[transform:rotateY(180deg)]' : ''}`}
                     style={isMobile ? { transform: flippedCards[step.id] ? "rotateY(180deg)" : "rotateY(0deg)" } : {}}
                   >
-                    <div className="absolute inset-0 [backface-visibility:hidden] bg-light-surface/80 dark:bg-dark-card/80 backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl hover:border-light-crystal-blue dark:hover:border-inferno-orange shadow-md shadow-red-500/20 dark:shadow-fire-glow-sm hover:shadow-lg hover:shadow-red-500/40 dark:hover:shadow-fire-glow transition-all duration-500 h-full p-6 md:p-8">
+                    <div className="absolute inset-0 [backface-visibility:hidden] bg-light-surface/80 dark:bg-dark-card/80 backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl hover:border-light-crystal-blue dark:hover:border-inferno-orange shadow-[0_0_15px_rgba(135,206,235,0.2),_0_0_15px_rgba(221,160,221,0.2)]  dark:shadow-gray-700 hover:shadow-[0_0_30px_rgba(135,206,235,0.6),_0_0_30px_rgba(221,160,221,0.6)]  dark:hover:shadow-gray-600 transition-all duration-500 h-full p-6 md:p-8">
+
                       <div className="flex justify-between items-start mb-4">
                         <div className="flex items-center">
                           <div className="w-12 h-12 bg-light-crystal-blue/20 dark:bg-ember-red rounded-2xl flex items-center justify-center text-light-crystal-purple dark:text-gray-300 mr-4">
@@ -282,7 +283,7 @@ const JourneySection: React.FC = () => {
                       </p>
                     </div>
 
-                    <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] bg-light-surface/80 dark:bg-dark-card/80 backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl hover:border-light-crystal-blue dark:hover:border-inferno-orange shadow-md shadow-red-500/20 dark:shadow-fire-glow-sm hover:shadow-lg hover:shadow-red-500/40 dark:hover:shadow-fire-glow transition-all duration-500 h-full p-6 md:p-8 flex items-center">
+                    <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] bg-light-surface/80 dark:bg-dark-card/80 backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl hover:border-sky-300 dark:hover:border-inferno-orange shadow-[0_0_15px_rgba(135,206,235,0.2),_0_0_15px_rgba(221,160,221,0.2)]  dark:shadow-fire-glow-sm  hover:shadow-[0_0_30px_rgba(135,206,235,0.6),_0_0_30px_rgba(221,160,221,0.6)]  dark:hover:shadow-fire-glow transition-all duration-500 h-full p-6 md:p-8 flex items-center">
                       <div className="space-y-4 w-full">
                         <h4 className="text-xl md:text-2xl font-medium text-light-text dark:text-gray-300 mb-2 text-center">
                           Key Achievements
@@ -291,7 +292,7 @@ const JourneySection: React.FC = () => {
                           {step.achievements && step.achievements.length > 0 ? (
                             step.achievements.map((achievement, i) => (
                               <div key={i} className="flex items-center">
-                                <div className="w-2 h-2 bg-light-crystal-blue dark:bg-gray-500 rounded-full mr-3" />
+                                <div className="w-2 h-2 bg-gray-700 dark:bg-gray-500 rounded-full mr-3" />
                                 <span className="text-xs md:text-sm text-light-muted dark:text-dark-text-muted font-light">
                                   {achievement}
                                 </span>

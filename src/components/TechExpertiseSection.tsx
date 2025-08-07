@@ -371,17 +371,35 @@ const TechExpertiseSection: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                    className="w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.3333%-21.3333px)] bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl p-4 sm:p-6 text-center shadow-light-shadow-lg dark:shadow-lg hover:shadow-light-shadow-xl dark:hover:shadow-2xl hover:border-light-crystal-blue dark:hover:border-gray-600 transition-all duration-500 group"
+                    className="w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.3333%-21.3333px)]
+        bg-light-surface dark:bg-dark-card
+        backdrop-blur-sm 
+        border border-gray-200/50 dark:border-smoke-gray/50
+        rounded-3xl 
+        p-4 sm:p-6 text-center
+        shadow-light-shadow-lg dark:shadow-lg
+        hover:shadow-light-shadow-xl dark:hover:shadow-gray-600
+        hover:border-light-crystal-blue dark:hover:border-gray-600
+        hover:brightness-105 hover:backdrop-blur-md
+        hover:animate-pulse-glow
+        transition-all duration-500 group"
                   >
-                    <div className="w-16 h-16 bg-light-crystal-blue/20 dark:bg-ember-red rounded-2xl flex items-center justify-center mx-auto mb-4 text-light-crystal-purple dark:text-gray-300">
+                    {/* Icon Box */}
+                    <div className="w-16 h-16 bg-light-crystal-blue/30 dark:bg-ember-red rounded-2xl flex items-center justify-center mx-auto mb-4 text-light-crystal-purple dark:text-gray-300">
                       {skill.icon}
                     </div>
-                    <h3 className="text-lg sm:text-xl font-medium text-light-text dark:text-gray-300 mb-2 group-hover:text-light-crystal-purple dark:group-hover:text-inferno-orange transition-colors duration-300">
+
+                    {/* Skill Title */}
+                    <h3 className="text-xl font-semibold text-light-crystal-purple dark:text-gray-300 mb-2 group-hover:text-light-crystal-blue dark:group-hover:text-inferno-orange transition-colors duration-300">
                       {skill.title}
                     </h3>
+
+                    {/* Description */}
                     <p className="text-light-muted dark:text-dark-text-muted text-sm leading-relaxed mb-4 font-light">
                       {skill.description}
                     </p>
+
+                    {/* Technologies */}
                     <div className="flex flex-wrap justify-center gap-2">
                       {skill.technologies.slice(0, 8).map((tech, i) => (
                         <span
@@ -392,7 +410,7 @@ const TechExpertiseSection: React.FC = () => {
                         </span>
                       ))}
                       {skill.technologies.length > 8 && (
-                        <span className="px-3 py-1 bg-light-crystal-blue/20 text-light-crystal-blue dark:bg-ashen-charcoal dark:text-dark-text-muted rounded-full text-xs font-medium">
+                        <span className="px-3 py-1 bg-light-crystal-blue/30 text-light-crystal-blue dark:bg-ashen-charcoal dark:text-dark-text-muted rounded-full text-xs font-medium">
                           +{skill.technologies.length - 8}
                         </span>
                       )}

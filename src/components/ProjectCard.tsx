@@ -37,9 +37,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       className="group relative bg-light-surface/80 dark:bg-dark-card/80 backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-3xl hover:border-light-crystal-blue dark:hover:border-inferno-orange
-                 shadow-[0_0_15px_rgba(135,206,235,0.2),_0_0_15px_rgba(221,160,221,0.2)] /* Light theme subtle glow */
+                 shadow-[0_0_15px_rgba(135,206,235,0.2),_0_0_15px_rgba(221,160,221,0.2)] 
                  dark:shadow-fire-glow
-                 hover:shadow-[0_0_30px_rgba(135,206,235,0.6),_0_0_30px_rgba(221,160,221,0.6)] /* Light theme stronger glow on hover */
+                 hover:shadow-[0_0_30px_rgba(135,206,235,0.6),_0_0_30px_rgba(221,160,221,0.6)] 
                  dark:hover:shadow-inferno-glow
                  transition-all duration-500 overflow-hidden"
     >
