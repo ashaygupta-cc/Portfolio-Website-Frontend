@@ -36,7 +36,7 @@ const BinaryBeatsLogo: React.FC<BinaryBeatsLogoProps> = ({
         className={`${sizeClasses[size]} rounded-xl flex items-center justify-center 
           ${isDark 
             ? 'bg-gradient-inferno shadow-fire-glow animate-fire-flicker' 
-            : 'bg-gradient-to-r from-purple-600 to-blue-600 shadow-light-shadow-md' 
+            : 'bg-gradient-to-r from-purple-500 to-blue-500 shadow-light-shadow-md' 
           }`}
       >
         <Code2 

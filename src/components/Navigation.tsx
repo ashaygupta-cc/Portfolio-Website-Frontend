@@ -96,7 +96,7 @@ const Navigation: React.FC = () => {
                 onClick={() => scrollToSection(item.id)}
                 className={`relative group px-2 py-1 rounded-lg transition-all duration-300 ${
                   activeSection === item.id
-                    ? 'text-from-purple-600 via-blue-600 to-purple-600 dark:text-inferno-orange font-medium'
+                    ? 'text-from-purple-500 via-blue-500 to-purple-500 dark:text-inferno-orange font-medium'
                     : 'text-light-muted dark:text-dark-text-muted leading-relaxed hover:text-blue-500/30 dark:hover:text-inferno-orange'
                 }`}
                 whileHover={{ scale: 1.05 }}

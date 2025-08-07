@@ -88,7 +88,7 @@ const HeroSection: React.FC = () => {
                   boxShadow: shadows
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center justify-center space-x-2 px-8 py-4 bg-purple-400 text-white font-medium rounded-full transition-all duration-300 hover:bg-blue-400 dark:bg-gradient-inferno dark:hover:shadow-fire-glow"
+                className="flex items-center justify-center space-x-2 px-8 py-4 bg-gradient-to-r from-[#3a9fff] to-[#9a5fff] text-white font-medium rounded-full transition-all duration-300 hover:bg-blue-400 dark:bg-gradient-inferno dark:hover:shadow-fire-glow"
               >
                 <Download className="w-5 h-5" />
                 <span>DOWNLOAD RESUME</span>
@@ -124,15 +124,15 @@ const HeroSection: React.FC = () => {
               className="grid grid-cols-3 gap-8"
             >
               <div className="text-center">
-                <div className="text-2xl font-light text-purple-600 dark:text-inferno-orange mb-1 animate-fire-flicker">1+</div>
+                <div className="text-2xl font-light text-purple-700 dark:text-inferno-orange mb-1 animate-fire-flicker">1+</div>
                 <div className="text-sm text-light-muted dark:text-dark-text-muted font-light">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-light text-blue-600 dark:text-crimson-blaze mb-1 animate-fire-flicker">2+</div>
+                <div className="text-2xl font-light text-blue-700 dark:text-crimson-blaze mb-1 animate-fire-flicker">2+</div>
                 <div className="text-sm text-light-muted dark:text-dark-text-muted font-light">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-light text-purple-600  dark:text-gray-300 mb-1 animate-fire-flicker">90%+</div>
+                <div className="text-2xl font-light text-purple-700  dark:text-gray-300 mb-1 animate-fire-flicker">90%+</div>
                 <div className="text-sm text-light-muted dark:text-dark-text-muted font-light">Client Satisfaction</div>
               </div>
             </motion.div>

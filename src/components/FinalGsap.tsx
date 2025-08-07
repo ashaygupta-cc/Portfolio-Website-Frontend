@@ -156,7 +156,7 @@ const FinalGsap: React.FC = () => {
             metalness={0.9}
             roughness={0.1}
             transparent={true} 
-            opacity={0.7} 
+            opacity={0.8} 
           />
         </instancedMesh>
       )}

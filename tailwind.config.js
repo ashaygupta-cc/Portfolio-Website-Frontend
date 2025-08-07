@@ -122,8 +122,8 @@ export default {
       },
       backgroundImage: {
         // Water Breathing Light Theme Gradients
-        "gradient-light-main":
-          "linear-gradient(135deg, #dff1fa 0%, #cde7f8 50%, #dff1fa 100%)",
+        "gradient-light-main": "linear-gradient(135deg, #e6f4ff 0%, #d0eaff 50%, #e6f4ff 100%)"
+,
         "gradient-light-crystal":
           "linear-gradient(135deg, #bfdbfe 0%, #7dd3fc 50%, #c7e7ff 100%)",
         "gradient-light-journey":

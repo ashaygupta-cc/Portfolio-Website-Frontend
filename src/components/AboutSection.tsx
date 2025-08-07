@@ -131,7 +131,7 @@ const AboutSection: React.FC = () => {
               ].map((tech) => (
                 <span
                   key={tech}
-                  className="px-4 py-2 bg-gradient-to-r from-light-crystal-purple to-light-crystal-blue text-white dark:bg-gradient-ember dark:text-gray-300 rounded-full text-sm font-medium  "
+                  className="px-4 py-2 bg-gradient-to-r from-purple-400 to-blue-500 text-white dark:bg-gradient-ember dark:text-gray-300 rounded-full text-sm font-medium  "
                 >
                   {tech}
                 </span>
