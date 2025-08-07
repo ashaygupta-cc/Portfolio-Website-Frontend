@@ -6,7 +6,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-src/components/TeamSection.tsx
 # Node.js and build artifacts
 node_modules/
 dist/

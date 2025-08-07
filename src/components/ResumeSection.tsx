@@ -258,8 +258,8 @@ const ResumeSection: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     className="p-4 bg-light-surface dark:bg-dark-card backdrop-blur-sm border border-gray-200/50 dark:border-smoke-gray/50 rounded-xl 
-                    hover:border-light-crystal-blue dark:hover:border-gray-700
-                    hover:shadow-light-shadow-lg dark:hover:shadow-gray-600 transition-all duration-300"
+                    hover:border-sky-300 dark:hover:border-gray-700
+                    hover:shadow-[0_0_30px_rgba(135,206,235,0.6),_0_0_30px_rgba(221,160,221,0.6)] dark:hover:shadow-gray-600 transition-all duration-300"
                   >
                     <p className="text-light-muted dark:text-dark-text-muted font-medium text-sm">
                       {cert}
