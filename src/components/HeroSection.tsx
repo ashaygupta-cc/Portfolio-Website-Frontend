@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[calc(var(--vh,1vh)_*100)] flex items-center justify-center overflow-hidden bg-gradient-light-main dark:bg-gradient-dark-main will-change-transform"
+      className="relative min-h-[calc(var(--vh,1vh)*100)] flex items-center justify-center overflow-hidden bg-gradient-light-main dark:bg-gradient-dark-main will-change-transform"
     >
       <Scene3D />
 

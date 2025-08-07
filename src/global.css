@@ -1,3 +1,4 @@
+/* ==== Global Resets ==== */
 * {
   margin: 0;
   padding: 0;
@@ -11,9 +12,10 @@ html {
 body {
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
-  /* REMOVED: background and color properties to be controlled by Tailwind CSS */
+  /* Background and colors controlled via Tailwind's dark/light mode */
 }
 
+/* ==== Custom Scrollbar ==== */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -29,4 +31,8 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #DC143C, #B22222);
+}
+
+:root {
+  --vh: 1vh; 
 }
