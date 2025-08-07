@@ -225,7 +225,7 @@ const SocialLinksSection: React.FC = () => {
                   boxShadow: "0 10px 40px rgba(139, 69, 19, 0.2)",
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 py-4 bg-light-crystal-purple text-white font-medium rounded-full transition-all duration-300 hover:bg-light-crystal-blue dark:bg-gradient-inferno dark:hover:shadow-fire-glow"
+                className="px-8 py-4 bg-gradient-to-r from-[#3a9fff] to-[#9a5fff] text-white font-medium rounded-full transition-all duration-300 hover:bg-light-crystal-blue dark:bg-gradient-inferno dark:hover:shadow-fire-glow"
               >
                 <span>START A CONVERSATION</span>
               </motion.button>

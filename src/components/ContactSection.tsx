@@ -345,7 +345,7 @@ const ContactSection: React.FC = () => {
                 disabled={submitStatus.isSubmitting}
                 whileHover={!submitStatus.isSubmitting ? { scale: 1.02 } : {}}
                 whileTap={!submitStatus.isSubmitting ? { scale: 0.98 } : {}}
-                className="w-full flex items-center justify-center space-x-2 py-4 bg-light-crystal-purple dark:bg-gradient-inferno text-white font-medium rounded-full transition-all duration-300 hover:bg-light-crystal-blue dark:hover:shadow-fire-glow disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full flex items-center justify-center space-x-2 py-4 bg-gradient-to-r from-[#3a9fff] to-[#9a5fff] dark:bg-gradient-inferno text-white font-medium rounded-full transition-all duration-300 hover:bg-light-crystal-blue dark:hover:shadow-fire-glow disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {submitStatus.isSubmitting ? (
                   <>

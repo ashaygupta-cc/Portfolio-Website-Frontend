@@ -88,7 +88,7 @@ const HeroSection: React.FC = () => {
                   boxShadow: shadows
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center justify-center space-x-2 px-8 py-4 bg-gradient-to-r from-[#3a9fff] to-[#9a5fff] text-white font-medium rounded-full transition-all duration-300 hover:bg-blue-400 dark:bg-gradient-inferno dark:hover:shadow-fire-glow"
+                className="flex items-center justify-center space-x-2 px-8 py-4 bg-gradient-to-r from-[#3a9fff] to-[#9a5fff] text-white font-medium rounded-full transition-all duration-300 hover:bg-light-crystal-blue  dark:bg-gradient-inferno dark:hover:shadow-fire-glow"
               >
                 <Download className="w-5 h-5" />
                 <span>DOWNLOAD RESUME</span>
